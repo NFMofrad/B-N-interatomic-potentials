@@ -131,11 +131,11 @@ and the name column widens to fit the longest group name.
 
 The lower strip of the by-group panel shows one force value per frame:
 
-| `--frame-stat` | Value | Red threshold | Use it for |
+| `--frame-stat` | Value | Red threshold |
 |---|---|---|---|
-| `max` (default) | largest \|F\| on any atom | 2 × p99 of all per-atom \|F\| | finding bad frames: one broken atom is enough to stand out |
-| `rms` | √(mean \|F\|²) over the atoms | 2 × p99 of the per-frame RMS values | comparing how far from equilibrium the groups are |
-| `mean` | mean \|F\| over the atoms | 2 × p99 of the per-frame mean values | same as `rms`, less weight on the largest forces |
+| `max` (default) | largest \|F\| on any atom | 2 × p99 of all per-atom \|F\| |
+| `rms` | √(mean \|F\|²) over the atoms | 2 × p99 of the per-frame RMS values |
+| `mean` | mean \|F\| over the atoms | 2 × p99 of the per-frame mean values |
 
 The largest force is the usual choice for data cleaning and active learning (for example
 DP-GEN selects frames by the maximum force deviation). An average dilutes a few bad atoms
