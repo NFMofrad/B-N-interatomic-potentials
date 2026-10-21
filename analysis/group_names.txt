@@ -1,0 +1,29 @@
+# Display names for the Config_type groups in the figure.
+#   python dataset_check.py train.xyz --names group_names.txt
+# One "group = label" per line; groups not listed get an automatic label.
+# Lines marked "check" are guesses from the folder name - correct them if needed.
+
+01_ds1                          = Dataset 1
+02_ds3                          = Dataset 3
+03_pristine_strained_hbn        = Strained pristine hBN
+04_point_defects                = Point defects
+05_multilayer_hbn               = Multilayer hBN
+06_line-paddle                  = Line defects (paddle)
+07_GBs                          = Grain boundaries (GBs)
+08_bn_clusters                  = BN clusters
+09_gb-snapshots_from_mlmd       = GB snapshots (ML-MD)
+10_mixed_defects_bilayer        = Mixed defects (bilayer hBN)
+11_mixed_defects_trilayer       = Mixed defects (trilayer hBN)
+12_ds2_tetra_layer              = Tetralayer hBN (Dataset 2)
+13_ds2_cubic                    = Cubic BN (Dataset 2)
+14_threshold_displacements      = Threshold displacement events
+15_ds4_bulk                     = Bulk hBN (Dataset 4)
+16_ds4_bnnts                    = BN nanotubes (Dataset 4)
+17_square-octagon-defect_mlhBN  = Square–octagon defects (multilayer)
+18_bundles                      = bundles                                 # check
+19_highT_mlmd_annealing         = High-T annealing (ML-MD)
+20_bulk_boron                   = Bulk B                                  # check: α-B?
+GBs_optimization                = GBs, relaxed                            # check
+B-B                             = B–B dimers
+B-N                             = B–N dimers
+N-N                             = N–N dimers
