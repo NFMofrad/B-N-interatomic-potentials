@@ -3,7 +3,7 @@
 dataset_check.py - energy and force check of NEP training files, with one summary figure.
 
     python dataset_check.py train.xyz
-    python dataset_check.py train.xyz test.xyz --top 15 --out check.png
+    python dataset_check.py train.xyz test.xyz --top 15 --out check.pdf
 
 Prints
   - frames with a missing energy or missing forces,
@@ -13,12 +13,14 @@ Prints
   - the frames with the highest E/atom,
   - |F| per atom (mean, median, p99, max) overall and per element,
   - the frames with the largest single-atom force.
-Plots (one figure, 2 x 2)
-  top left    : E/atom of every frame, one row per group (median marked)
-  top right   : E/atom distribution, frames with > 2 atoms and dimers/atoms separately,
-                min / median / max marked
-  bottom left : |F| per atom distribution per element, log |F| axis, mean / p99 / max marked
-  bottom right: largest |F| of every frame, one row per group (red = above 2 x p99)
+Plot (one figure, one row, two panels; energy = green, bottom/left axes;
+force = blue, top/right axes)
+  left : by group, one row per group: E/atom of every frame (upper strip, bottom axis)
+         and the force of every frame (lower strip, top axis) - by default the largest
+         |F| in the frame, or its RMS / mean with --frame-stat; black tick = median,
+         red = force outlier (see --frame-stat) or energy outlier (--outliers)
+  right: per-atom distributions: E/atom of all frames (bottom/left axes; > 2 atoms solid,
+         dimers/atoms dashed) and |F| per atom (top/right axes; B solid, N dashed)
 
 Reads the extended XYZ directly (keys are case-insensitive, so lowercase 'energy=' /
 'lattice=' / 'properties=' work - ASE misplaces or ignores those). Needs numpy + matplotlib.
@@ -67,12 +69,63 @@ def where(r):
     return f"frame {r['index']:6d}  {r['file']} / {r['config']}"
 
 
+# ====================================================================== group names
+# Config_type prefixes are often short folder names ("16_ds4_bnnts"). For the figure they
+# are turned into readable labels: the ordering prefix ("16_") is dropped, "_" and "-"
+# become spaces, and common abbreviations get their usual spelling. A names file
+# (--names) overrides any of them.
+WORDS = {
+    "hbn": "hBN", "cbn": "c-BN", "wbn": "w-BN", "bn": "BN", "bnnt": "BNNT", "bnnts": "BNNTs",
+    "gb": "GB", "gbs": "grain boundaries", "mlhbn": "multilayer hBN", "mlmd": "ML-MD",
+    "md": "MD", "aimd": "AIMD", "dft": "DFT", "hight": "high-T", "lowt": "low-T",
+    "tetra": "tetra-", "bilayer": "bilayer", "trilayer": "trilayer", "multilayer": "multilayer",
+    "optimization": "relaxed", "opt": "relaxed", "snapshots": "snapshots",
+}
+
+
+def auto_name(g):
+    s = re.sub(r"^\d+[_\-. ]+", "", g)                 # drop "16_" ordering prefix
+    m = re.fullmatch(r"([A-Z][a-z]?)-([A-Z][a-z]?)", s)  # "B-N" -> "B–N dimers"
+    if m:
+        return f"{m.group(1)}–{m.group(2)} dimers"
+    m = re.fullmatch(r"ds(\d+)", s, re.I)
+    if m:
+        return f"Data set {m.group(1)}"
+    out = []
+    for tok in re.split(r"[_\- ]+", s):
+        low = tok.lower()
+        if not tok or re.fullmatch(r"ds\d+", low):         # data-set tags carry no meaning
+            continue
+        out.append(WORDS.get(low, tok))
+    text = " ".join(out).replace("tetra- ", "tetra")
+    return text[:1].upper() + text[1:] if text else g
+
+
+def read_names(path):
+    """names file: one 'Config_type group = Display name' per line, '#' starts a comment"""
+    names = {}
+    for line in open(path, encoding="utf-8"):
+        line = line.split("#", 1)[0].strip()
+        if "=" in line:
+            k, v = line.split("=", 1)
+            names[k.strip()] = v.strip()
+    return names
+
+
 # ====================================================================== main
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("files", nargs="+")
     ap.add_argument("--top", type=int, default=10, help="list this many frames in the top-N tables")
-    ap.add_argument("--out", default="dataset_check.png")
+    ap.add_argument("--out", default="dataset_check.png", help="figure file (.png, .pdf, .svg ...)")
+    ap.add_argument("--frame-stat", choices=("max", "rms", "mean"), default="max",
+                    help="per-frame force in the by-group panel: largest |F| (default, best "
+                         "for finding bad frames), RMS |F| or mean |F| (how far from "
+                         "equilibrium a frame is)")
+    ap.add_argument("--names", metavar="FILE",
+                    help="file with 'group = Display name' lines for the figure labels")
+    ap.add_argument("--raw-names", action="store_true",
+                    help="label groups with their Config_type prefix exactly as in the file")
     ap.add_argument("--outliers", action="store_true",
                     help="flag frames whose E/atom is far from their group median (off by default)")
     args = ap.parse_args()
@@ -87,8 +140,9 @@ def main():
                 elems += fr["sp"]
                 j = int(np.argmax(m))
                 fr["fmax"], fr["fmax_el"] = float(m[j]), fr["sp"][j]
+                fr["frms"], fr["fmean"] = float(np.sqrt(np.mean(m ** 2))), float(m.mean())
             else:
-                fr["fmax"], fr["fmax_el"] = None, None
+                fr["fmax"], fr["fmax_el"], fr["frms"], fr["fmean"] = None, None, None, None
             fr["F"] = None        # keep memory low for big files
             recs.append(fr)
     if not recs:
@@ -96,6 +150,11 @@ def main():
 
     groups = sorted({r["group"] for r in recs},
                     key=lambda g: [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", g)])
+    custom = read_names(args.names) if args.names else {}
+    label = {g: custom.get(g, g if args.raw_names else auto_name(g)) for g in groups}
+    unused = sorted(set(custom) - set(groups))
+    if unused:
+        print(f"names file: no group called {', '.join(unused)} (check the spelling)")
     no_e = sum(r["E"] is None for r in recs)
     no_f = sum(r["fmax"] is None for r in recs)
     print(f"{len(recs)} frames read, {len(groups)} groups")
@@ -114,14 +173,19 @@ def main():
     def estats(x):
         return (f"mean={x.mean():9.3f}  std={x.std():7.3f}  "
                 f"min={x.min():9.3f}  max={x.max():9.3f}  eV/atom")
+    w = max(22, max(len(g) for g in groups))      # column width for the group names
+    if any(label[g] != g for g in groups):
+        print("\ngroup labels used in the figure:")
+        for g in groups:
+            print(f"  {g:<{w}} -> {label[g]}")
     print("\n=== energy per atom ===")
-    print(f"  all frames             n={len(epa):6d}  {estats(epa)}")
+    print(f"  {'all frames':<{w}} n={len(epa):6d}  {estats(epa)}")
     if bulk.any() and (~bulk).any():
-        print(f"  > 2 atoms              n={bulk.sum():6d}  {estats(epa[bulk])}")
+        print(f"  {'> 2 atoms':<{w}} n={bulk.sum():6d}  {estats(epa[bulk])}")
     for g in groups:
         m = grp == g
         if m.any():
-            print(f"  {g:<22} n={m.sum():6d}  {estats(epa[m])}")
+            print(f"  {g:<{w}} n={m.sum():6d}  {estats(epa[m])}")
 
     # outliers: far from the group median, judged with a robust spread (MAD).
     # 1-2 atom frames are skipped - a dimer curve is supposed to spread widely.
@@ -164,15 +228,29 @@ def main():
         print(f"\nframes with the largest single-atom force (top {args.top}):")
         for r in frecs[:args.top]:
             print(f"  {r['fmax']:9.2f} eV/A on {r['fmax_el']:<3} n={r['n']:4d}  {where(r)}")
+        if args.frame_stat != "max":
+            key = "f" + args.frame_stat
+            name = {"rms": "RMS", "mean": "mean"}[args.frame_stat]
+            print(f"\nframes with the largest {name} |F| per frame (top {args.top}):")
+            for r in sorted(frecs, key=lambda r: -r[key])[:args.top]:
+                print(f"  {r[key]:9.2f} eV/A  (largest {r['fmax']:7.2f})  n={r['n']:4d}  {where(r)}")
     else:
         mags, elems = np.array([]), np.array([])
 
-    plot(groups, epa, nat, grp, out, mags, elems, frecs, len(recs), args.out, args.outliers)
+    plot(groups, epa, nat, grp, out, mags, elems, frecs, len(recs), args.out, args.outliers,
+         args.frame_stat, label)
     print(f"\nplot -> {args.out}")
 
 
 # ====================================================================== plot
-def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show_out=False):
+INK, INK2, MUTED, GRID, SURF, BAND = "#1f1f1d", "#4a4a46", "#8a8984", "#e9e8e3", "#ffffff", "#f5f4f0"
+ECOL, ETXT = "#1baf7a", "#0d7a54"      # energy: marks / axis text
+FCOL, FTXT = "#2a78d6", "#1d5aa6"      # force:  marks / axis text
+HOT = "#d1495b"                        # flagged frames
+
+
+def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show_out=False,
+         frame_stat="max", label=None):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -180,11 +258,6 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
     from matplotlib.scale import SymmetricalLogTransform
     from matplotlib.ticker import FixedLocator, FuncFormatter, LogLocator
 
-    INK, INK2, MUTED, GRID, SURF, BAND = "#1f1f1d", "#4a4a46", "#8a8984", "#e9e8e3", "#ffffff", "#f5f4f0"
-    DOT, HOT = "#3d6fb6", "#d1495b"                  # strip points / flagged points
-    ELCOL = {"B": "#2a78d6", "N": "#eb6834"}
-    CATCOL = {"big": "#1baf7a", "small": "#8b5cf6"}  # frames with > 2 atoms / dimers + atoms
-    OTHER = ["#1baf7a", "#eda100", "#8b5cf6", "#0ea5b7"]
     plt.rcParams.update({
         "font.size": 10.5, "axes.spines.top": False, "axes.spines.right": False,
         "axes.edgecolor": MUTED, "axes.linewidth": 0.8, "axes.labelcolor": INK2,
@@ -196,27 +269,7 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
     row = {g: i for i, g in enumerate(groups)}
     rng = np.random.default_rng(0)
 
-    # ---------------- layout ---------------------------------------------------------------
-    #   row 1: [names | E/atom by group]   [E/atom distribution]
-    #   row 2: [|F| distribution]          [names | largest |F| by group]
-    def short(g, n=30):
-        return g if len(g) <= n else g[:n - 1] + "…"
-    ylabels = [f"{short(g)}  ({int(np.sum(grp == g))})" for g in groups]
-    W = 14.0
-    L = (0.3 + 0.072 * max(len(t) for t in ylabels)) / W     # width of the name column
-    h_row = max(4.0, 0.27 * ng + 0.6)
-    top, gap, bot = 1.75, 1.55, 0.8
-    H = top + 2 * h_row + gap + bot
-    fig = plt.figure(figsize=(W, H), dpi=200, facecolor=SURF)
-    y1, y2, hr = (bot + h_row + gap) / H, bot / H, h_row / H
-    axE = fig.add_axes([L, y1, 0.545 - L, hr])
-    axEH = fig.add_axes([0.615, y1, 0.37, hr])
-    axF = fig.add_axes([0.065, y2, 0.385, hr])
-    axM = fig.add_axes([0.46 + L, y2, 0.985 - 0.46 - L, hr])
-
-    def title(ax, text, pad=10):
-        ax.set_title(text, loc="left", fontsize=11.5, color=INK, pad=pad)
-
+    # ---------------- helpers ----------------------------------------------------------
     def log_ticks(axis, lo, hi):
         dec = np.log10(hi / lo)
         subs = (1,) if dec > 4 else (1, 2, 5) if dec > 1.5 else (1, 1.5, 2, 3, 5, 7)
@@ -224,44 +277,21 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
         axis.set_major_formatter(plain)
         axis.set_minor_formatter(blank)
 
-    def group_rows(ax):
-        for i in range(0, ng, 2):
-            ax.axhspan(i - 0.5, i + 0.5, color=BAND, lw=0, zorder=0)
-        ax.set_yticks(range(ng))
-        ax.set_yticklabels(ylabels, fontsize=9)
-        ax.tick_params(axis="y", length=0)
-        ax.set_ylim(ng - 0.5, -0.5)                     # first group on top
-        ax.spines["left"].set_visible(False)
-        ax.grid(True, axis="x", color=GRID, lw=0.8); ax.set_axisbelow(True)
+    def color_axis(ax, which, col, txt):
+        """colour one axis (x-bottom, x-top, y-left, y-right) by quantity"""
+        side = {"bottom": "x", "top": "x", "left": "y", "right": "y"}[which]
+        ax.spines[which].set_visible(True)
+        ax.spines[which].set_color(col)
+        ax.spines[which].set_linewidth(1.1)
+        ax.tick_params(axis=side, colors=col, labelcolor=txt)
+        (ax.xaxis if side == "x" else ax.yaxis).label.set_color(txt)
 
-    def median_tick(ax, x, r):
-        ax.plot([x, x], [r - 0.38, r + 0.38], color=INK, lw=1.6, zorder=5, solid_capstyle="butt")
-
-    def markers(ax, items, lo, hi, log=False):
-        """vertical lines with labels staggered in height so they never collide"""
-        for (lab, val, ls), yy in zip(items, (0.985, 0.915, 0.845)):
-            ax.axvline(val, color=INK, lw=0.9, ls=ls, alpha=0.75, zorder=1)
-            frac = (np.log(val / lo) / np.log(hi / lo)) if log else None
-            if frac is None:
-                tr = ax.transData + ax.transAxes.inverted()
-                frac = tr.transform((val, 0))[0]
-            right = frac > 0.75
-            ax.annotate(f"{lab} {val:.2f}", xy=(val, yy), xycoords=("data", "axes fraction"),
-                        xytext=(-4 if right else 4, 0), textcoords="offset points",
-                        ha="right" if right else "left", va="top", fontsize=8.5, color=INK2,
-                        bbox=dict(boxstyle="square,pad=0.15", fc=SURF, ec="none", alpha=0.9))
-
-    def legend(ax, handles):
-        ax.legend(handles=handles, loc="upper left", frameon=True, facecolor=SURF,
-                  edgecolor="none", framealpha=1.0, fontsize=9, labelspacing=0.9,
-                  handlelength=1.6)
-
-    def step_hist(ax, x, bins, col):
-        h, e = np.histogram(x, bins=bins)
-        frac = h / max(len(x), 1) * 100
-        ax.fill_between(e[:-1], frac, step="post", color=col, alpha=0.07, lw=0)
-        ax.step(e[:-1], frac, where="post", color=col, lw=1.9)
-        return frac.max() if len(frac) else 0
+    def top_axis(ax):
+        """a second x axis on top (shares y)"""
+        t = ax.twiny()
+        for sp in ("left", "right", "bottom"):
+            t.spines[sp].set_visible(False)
+        return t
 
     # energy axis: linear, or symlog when dimer walls reach far up
     emin, emax = epa.min(), epa.max()
@@ -278,31 +308,129 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
             ax.xaxis.set_minor_locator(FixedLocator([]))
         ax.set_xlabel(e_label)
 
-    # ---------------- top left: E/atom of every frame, by group --------------------------
-    group_rows(axE)
+    # force per frame
+    have_f = bool(frecs) and len(mags) > 0
+    fname = {"max": "Largest |F|", "rms": "RMS |F|", "mean": "Mean |F|"}[frame_stat]
+    if have_f:
+        fmx = np.array([r["f" + frame_stat] for r in frecs])
+        frow = np.array([row[r["group"]] for r in frecs])
+        pos = fmx[fmx > 0]
+        flo = max(pos.min() if len(pos) else 1e-3, 1e-3) * 0.8
+        fhi = fmx.max() * 1.3
+        p99 = np.percentile(mags, 99)
+        # red threshold: largest |F| -> 2 x p99 of all per-atom |F|;
+        #                RMS / mean  -> 2 x p99 of the per-frame values themselves
+        if frame_stat == "max":
+            thr, thr_txt = 2 * p99, f"above 2 × p99 of per-atom |F| = {2 * p99:.1f} eV/Å"
+        else:
+            q = np.percentile(fmx, 99)
+            thr, thr_txt = 2 * q, f"above 2 × p99 of per-frame {fname} = {2 * q:.1f} eV/Å"
+
+    # ---------------- layout -------------------------------------------------------------
+    def short(g, n=30):
+        return g if len(g) <= n else g[:n - 1] + "…"
+    label = label or {g: g for g in groups}
+    ylabels = [f"{short(label[g], 48)}  ({int(np.sum(grp == g))})" for g in groups]
+    W = 15.0
+    L = (0.3 + 0.072 * max(len(t) for t in ylabels)) / W          # name column
+    h_ax = max(4.2, 0.42 * ng + 0.4)                                 # two strips per group
+    # bottom margin: x label + the legends below both panels (left: 2 columns, right: 1)
+    n_left = 3 + (2 if have_f else 0) + (1 if show_out else 0)
+    n_right = (1 if (nat > 2).any() else 0) + (1 if (nat <= 2).any() else 0) + len(set(elems)) + 1
+    rows = max(-(-n_left // 2), n_right)
+    top, bot = 2.35, 1.15 + 0.2 * rows
+    H = top + h_ax + bot
+    fig = plt.figure(figsize=(W, H), dpi=200, facecolor=SURF)
+    y0, hr = bot / H, h_ax / H
+    axG = fig.add_axes([L, y0, 0.545 - L, hr])
+    axD = fig.add_axes([0.61, y0, 0.335, hr])
+
+    # ======================================================================================
+    # left: by group - energy strip (upper, bottom axis) + force strip (lower, top axis)
+    # ======================================================================================
+    dE, dF = -0.2, 0.2                    # sub-row offsets (y axis is inverted)
+    for i in range(0, ng, 2):
+        axG.axhspan(i - 0.5, i + 0.5, color=BAND, lw=0, zorder=0)
+    for i in range(1, ng):
+        axG.axhline(i - 0.5, color=GRID, lw=0.6, zorder=0)
+
+    def median_tick(ax, x, y):
+        ax.plot([x, x], [y - 0.15, y + 0.15], color=INK, lw=1.6, zorder=5, solid_capstyle="butt")
+
     for g in groups:
         m = grp == g
         if not m.any():
             continue
-        y = row[g] + rng.uniform(-0.28, 0.28, m.sum())
+        y = row[g] + dE + rng.uniform(-0.12, 0.12, m.sum())
         normal, flag = ~out[m], out[m]
-        axE.scatter(epa[m][normal], y[normal], s=7, color=DOT, alpha=0.55, lw=0, zorder=3)
+        axG.scatter(epa[m][normal], y[normal], s=7, color=ECOL, alpha=0.6, lw=0, zorder=3)
         if flag.any():
-            axE.scatter(epa[m][flag], y[flag], s=16, color=HOT, lw=0, zorder=4)
-        median_tick(axE, np.median(epa[m]), row[g])
+            axG.scatter(epa[m][flag], y[flag], s=16, color=HOT, lw=0, zorder=4)
+        median_tick(axG, np.median(epa[m]), row[g] + dE)
+    energy_axis(axG)
+    axG.set_yticks(range(ng))
+    axG.set_yticklabels(ylabels, fontsize=9)
     if show_out:
-        for lab, g in zip(axE.get_yticklabels(), groups):
+        for lab, g in zip(axG.get_yticklabels(), groups):
             if np.any(out & (grp == g)):
                 lab.set_color(HOT)
-    energy_axis(axE)
-    leg = [Line2D([], [], ls="", marker="o", ms=4, color=DOT, label="frame")]
-    if show_out:
-        leg.append(Line2D([], [], ls="", marker="o", ms=5, color=HOT, label="outlier (group name in red)"))
-    leg.append(Line2D([], [], color=INK, lw=1.6, label="group median"))
-    axE.legend(handles=leg, loc="lower left", bbox_to_anchor=(0.0, 1.008), ncol=3, frameon=False,
-               fontsize=8.8, handletextpad=0.4, columnspacing=1.2, borderaxespad=0)
+    axG.tick_params(axis="y", length=0)
+    axG.set_ylim(ng - 0.5, -0.5)                       # first group on top
+    axG.spines["left"].set_visible(False)
+    color_axis(axG, "bottom", ECOL, ETXT)
 
-    # ---------------- top right: E/atom distribution ------------------------------------
+    axGF = top_axis(axG)
+    below = np.zeros(0, bool)
+    if have_f:
+        below = fmx < flo / 0.8
+        hot = fmx > thr
+        y = frow + dF + rng.uniform(-0.12, 0.12, len(fmx))
+        axGF.scatter(fmx[~hot & ~below], y[~hot & ~below], s=7, color=FCOL, alpha=0.6, lw=0, zorder=3)
+        if below.any():
+            axGF.scatter(np.full(below.sum(), flo), y[below], s=12, marker="<", color=MUTED,
+                         lw=0, zorder=3)
+        if hot.any():
+            axGF.scatter(fmx[hot], y[hot], s=16, color=HOT, lw=0, zorder=4)
+        for g in groups:
+            mm = frow == row[g]
+            if mm.any():
+                median_tick(axGF, np.median(fmx[mm]), row[g] + dF)
+        axGF.set_xscale("log")
+        axGF.set_xlim(flo / 1.15, fhi)
+        log_ticks(axGF.xaxis, flo, fhi)
+        axGF.axvline(thr, color=HOT, lw=0.9, ls="--", zorder=2)
+    axGF.set_ylim(ng - 0.5, -0.5)
+    axGF.set_xlabel(f"{fname} in the frame (eV/Å)")
+    color_axis(axGF, "top", FCOL, FTXT)
+
+    key = [Line2D([], [], ls="", marker="o", ms=5, color=ECOL, label="energy per atom (upper strip)"),
+           Line2D([], [], ls="", marker="o", ms=5, color=FCOL, label=f"{fname} per frame (lower strip)"),
+           Line2D([], [], color=INK, lw=1.6, label="group median")]
+    if have_f:
+        key.append(Line2D([], [], color=HOT, lw=0.9, ls="--", marker="o", ms=4,
+                          label=f"force {thr_txt}"))
+        if below.any():
+            key.append(Line2D([], [], ls="", marker="<", ms=5, color=MUTED,
+                              label=f"{fname} below {flo / 0.8:g} eV/Å ({below.sum()})"))
+    if show_out:
+        key.append(Line2D([], [], ls="", marker="o", ms=5, color=HOT,
+                          label="energy outlier (group name in red)"))
+    axG.legend(handles=key, loc="upper left", bbox_to_anchor=(0.0, -0.75 / h_ax), ncol=2,
+               frameon=False, fontsize=8.8, handletextpad=0.4, columnspacing=1.6,
+               borderaxespad=0, labelspacing=0.4)
+    axG.set_title("By group", loc="left", fontsize=12, color=INK, pad=44)
+
+    # ======================================================================================
+    # right: per-atom distributions - energy (bottom/left axes) + force (top/right axes)
+    # ======================================================================================
+    def step_hist(ax, x, bins, col, ls):
+        h, e = np.histogram(x, bins=bins)
+        frac = h / max(len(x), 1) * 100
+        if ls == "-":
+            ax.fill_between(e[:-1], frac, step="post", color=col, alpha=0.08, lw=0)
+        ax.step(e[:-1], frac, where="post", color=col, lw=1.9, ls=ls)
+        return frac.max() if len(frac) else 0
+
     span = max(emax - emin, 1e-6)
     if e_symlog:
         T = SymmetricalLogTransform(10, 10, 1.6)
@@ -310,103 +438,60 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
         ebins = T.inverted().transform(np.linspace(tlo, thi + 1e-9, 91))
     else:
         ebins = np.linspace(emin - 0.02 * span, emax + 0.02 * span, 91)
-    cats = [("big", nat > 2, "more than 2 atoms"), ("small", nat <= 2, "dimers and atoms")]
-    hmax, handles = 0, []
-    for key, m, name in cats:
+    handles, hmax = [], 0
+    for m, ls, name in [(nat > 2, "-", "> 2 atoms"), (nat <= 2, "--", "dimers + atoms")]:
         if not m.any():
             continue
-        hmax = max(hmax, step_hist(axEH, epa[m], ebins, CATCOL[key]))
+        hmax = max(hmax, step_hist(axD, epa[m], ebins, ECOL, ls))
         x = epa[m]
-        handles.append(Line2D([], [], color=CATCOL[key], lw=2.4, label=(
-            f"{name} ({m.sum():,} frames):  median {np.median(x):.2f},  "
+        handles.append(Line2D([], [], color=ECOL, lw=2.2, ls=ls, label=(
+            f"E/atom, {name} ({m.sum():,} frames): median {np.median(x):.2f}, "
             f"range {x.min():.2f} to {x.max():.2f}")))
-    energy_axis(axEH)
-    axEH.set_xlim(ebins[0], ebins[-1])
-    axEH.set_ylim(0, hmax * 1.55)
-    markers(axEH, [("min", emin, ":"), ("median", float(np.median(epa)), "-"), ("max", emax, ":")],
-            ebins[0], ebins[-1])
-    # legend above the axes so it never hides the min / median / max labels
-    axEH.legend(handles=handles, loc="lower left", bbox_to_anchor=(0.0, 1.008), frameon=False,
-                fontsize=8.8, handlelength=1.6, borderaxespad=0, labelspacing=0.3)
-    axEH.set_ylabel("Share of frames per bin (%)")
-    axEH.grid(True, axis="y", color=GRID, lw=0.8); axEH.set_axisbelow(True)
-    e_pad = max(24, 12 + 15 * len(handles))        # same title height across the row
-    title(axEH, "Energy per atom, distribution", pad=e_pad)
-    title(axE, "Energy per atom, every frame by group", pad=e_pad)
+    energy_axis(axD)
+    axD.set_xlim(ebins[0], ebins[-1])
+    axD.set_ylim(0, hmax * 1.12)
+    axD.set_ylabel("Share of frames per bin (%)")
+    color_axis(axD, "bottom", ECOL, ETXT)
+    color_axis(axD, "left", ECOL, ETXT)
 
-    # ---------------- bottom left: |F| per atom per element ------------------------------
+    axDF = axD.figure.add_axes(axD.get_position(), label="force-dist")
+    axDF.patch.set_visible(False)
+    axDF.xaxis.tick_top(); axDF.xaxis.set_label_position("top")
+    axDF.yaxis.tick_right(); axDF.yaxis.set_label_position("right")
+    for sp in ("left", "bottom"):
+        axDF.spines[sp].set_visible(False)
     if len(mags):
         els = sorted(set(elems))
-        color = {el: ELCOL.get(el, OTHER[i % len(OTHER)]) for i, el in enumerate(els)}
+        styles = ["-", "--", ":", "-."]
         lo = max(np.percentile(mags[mags > 0], 0.1), 1e-3) if np.any(mags > 0) else 1e-3
         bins = np.logspace(np.log10(lo), np.log10(mags.max() * 1.05), 70)
         fmax_h = 0
-        for el in els:
-            fmax_h = max(fmax_h, step_hist(axF, np.clip(mags[elems == el], lo, None), bins, color[el]))
-        axF.set_xscale("log")
-        log_ticks(axF.xaxis, bins[0], bins[-1])
-        axF.set_xlim(bins[0], bins[-1])
-        axF.set_ylim(0, fmax_h * 1.55)
-        n_low = int(np.sum(mags < lo))
-        if n_low > 0.005 * len(mags):          # only worth a note when it is visible
-            first = max(100 * np.sum((elems == el) & (mags < bins[1])) / max(np.sum(elems == el), 1)
-                        for el in els)
-            axF.annotate(f"◂ first bin also holds every |F| < {lo:.3g} eV/Å\n   "
-                         f"({100 * n_low / len(mags):.1f}% of atoms, e.g. relaxed structures)",
-                         xy=(bins[1], first), xytext=(6, 4), textcoords="offset points",
-                         fontsize=8.3, color=MUTED, va="bottom")
-        markers(axF, [("mean", mags.mean(), "-"), ("p99", np.percentile(mags, 99), "--"),
-                      ("max", mags.max(), ":")], bins[0], bins[-1], log=True)
-        handles = []
-        for el in els:
+        for i, el in enumerate(els):
             xe = mags[elems == el]
-            handles.append(Line2D([], [], color=color[el], lw=2.4, label=(
-                f"{el}   {len(xe):,} atoms\n      mean {xe.mean():.2f} · p99 "
-                f"{np.percentile(xe, 99):.2f} · max {xe.max():.1f}")))
-        legend(axF, handles)
-    axF.set_xlabel("|F| per atom (eV/Å)")
-    axF.set_ylabel("Share of atoms per bin (%)")
-    axF.grid(True, axis="y", color=GRID, lw=0.8); axF.set_axisbelow(True)
+            fmax_h = max(fmax_h, step_hist(axDF, np.clip(xe, lo, None), bins, FCOL, styles[i % 4]))
+            handles.append(Line2D([], [], color=FCOL, lw=2.2, ls=styles[i % 4], label=(
+                f"|F|, {el} ({len(xe):,} atoms): mean {xe.mean():.2f}, p99 "
+                f"{np.percentile(xe, 99):.2f}, max {xe.max():.1f}")))
+        axDF.set_xscale("log")
+        log_ticks(axDF.xaxis, bins[0], bins[-1])
+        axDF.set_xlim(bins[0], bins[-1])
+        axDF.set_ylim(0, fmax_h * 1.12)
+        n_low = int(np.sum(mags < lo))
+        if n_low > 0.005 * len(mags):
+            handles.append(Line2D([], [], ls="", label=(
+                f"   first force bin also holds |F| < {lo:.3g} eV/Å "
+                f"({100 * n_low / len(mags):.1f}% of atoms)")))
+    axDF.set_xlabel("|F| per atom (eV/Å)")
+    axDF.set_ylabel("Share of atoms per bin (%)", rotation=270, labelpad=14)
+    color_axis(axDF, "top", FCOL, FTXT)
+    color_axis(axDF, "right", FCOL, FTXT)
+    axD.grid(True, axis="y", color=GRID, lw=0.8); axD.set_axisbelow(True)
+    axD.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.0, -0.75 / h_ax), ncol=1,
+               frameon=False, fontsize=8.8, handlelength=2.2, borderaxespad=0, labelspacing=0.4)
+    axD.set_title("Per-atom distributions", loc="left", fontsize=12, color=INK, pad=44)
 
-    # ---------------- bottom right: largest |F| of every frame, by group -----------------
-    group_rows(axM)
-    if frecs:
-        fmx = np.array([r["fmax"] for r in frecs])
-        frow = np.array([row[r["group"]] for r in frecs])
-        pos = fmx[fmx > 0]
-        flo = max(pos.min() if len(pos) else 1e-3, 1e-3) * 0.8
-        fhi = fmx.max() * 1.3
-        below = fmx < flo / 0.8
-        y = frow + rng.uniform(-0.28, 0.28, len(fmx))
-        p99 = np.percentile(mags, 99) if len(mags) else np.inf
-        hot = fmx > 2 * p99
-        axM.scatter(fmx[~hot & ~below], y[~hot & ~below], s=7, color=DOT, alpha=0.55, lw=0, zorder=3)
-        if below.any():
-            axM.scatter(np.full(below.sum(), flo), y[below], s=12, marker="<", color=MUTED,
-                        lw=0, zorder=3)
-        if hot.any():
-            axM.scatter(fmx[hot], y[hot], s=16, color=HOT, lw=0, zorder=4)
-        for g in groups:
-            m = frow == row[g]
-            if m.any():
-                median_tick(axM, np.median(fmx[m]), row[g])
-        axM.set_xscale("log")
-        axM.set_xlim(flo / 1.15, fhi)
-        log_ticks(axM.xaxis, flo, fhi)
-        if np.isfinite(p99):
-            axM.axvline(2 * p99, color=HOT, lw=0.9, ls="--", zorder=2)
-        note = f"red: above 2 × p99 = {2 * p99:.1f} eV/Å  ·  black tick: group median"
-        if below.any():
-            note += f"\n◂ {below.sum()} frame(s) with largest |F| below {flo / 0.8:g} eV/Å"
-        axM.text(0.0, 1.018, note, transform=axM.transAxes, fontsize=8.8, color=INK2,
-                 va="bottom", ha="left")
-    axM.set_xlabel("Largest |F| in the frame (eV/Å)")
-    f_pad = 24 if not (frecs and below.any()) else 36
-    title(axM, "Largest force per frame, by group", pad=f_pad)
-    title(axF, "Force per atom, distribution by element", pad=f_pad)
-
-    # ---------------- figure titles ------------------------------------------------------
-    fig.text(0.065, 1 - 0.35 / H, "Training-set check: energies and forces", fontsize=16,
+    # ---------------- header ---------------------------------------------------------------
+    fig.text(0.02, 1 - 0.3 / H, "Training-set check: energies and forces", fontsize=16,
              fontweight="bold", color=INK, va="top")
     sub = f"{nframes:,} frames  ·  {ng} groups"
     if show_out:
@@ -414,8 +499,11 @@ def plot(groups, epa, nat, grp, out, mags, elems, frecs, nframes, path_out, show
     if len(mags):
         sub += (f"  ·  {len(mags):,} atoms, median |F| {np.median(mags):.2f} eV/Å, "
                 f"99% below {np.percentile(mags, 99):.2f} eV/Å")
-    fig.text(0.065, 1 - 0.75 / H, sub, fontsize=10, color=INK2, va="top")
+    fig.text(0.02, 1 - 0.7 / H, sub, fontsize=10, color=INK2, va="top")
+    fig.text(0.02, 1 - 1.02 / H, "green = energy (bottom / left axes)   ·   "
+             "blue = force (top / right axes)", fontsize=10, color=INK2, va="top")
     fig.savefig(path_out, facecolor=SURF)
+    plt.close(fig)
 
 
 if __name__ == "__main__":
