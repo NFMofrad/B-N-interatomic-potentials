@@ -132,7 +132,7 @@ and the name column widens to fit the longest group name.
 The lower strip of the by-group panel shows one force value per frame:
 
 | `--frame-stat` | Value | Red threshold |
-|---|---|---|---|
+|---|---|---|
 | `max` (default) | largest \|F\| on any atom | 2 × p99 of all per-atom \|F\| |
 | `rms` | √(mean \|F\|²) over the atoms | 2 × p99 of the per-frame RMS values |
 | `mean` | mean \|F\| over the atoms | 2 × p99 of the per-frame mean values |
