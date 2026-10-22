@@ -1,0 +1,7 @@
+potential /scratch/work/fakhran1/hBN/05_Validation/05_phonon_dispersion/01_Attempt1/nep_best.txt
+velocity 1e-6
+ensemble nve
+time_step 1e-6
+dump_thermo 1
+dump_xyz 1 forces.xyz force
+run 1
