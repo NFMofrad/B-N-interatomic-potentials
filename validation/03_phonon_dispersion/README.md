@@ -114,13 +114,6 @@ and its fractional position along it.
 
 Source: Serrano et al., *Phys. Rev. Lett.* **98**, 095503 (2007).
 
-There are no built-in experimental values for the monolayer; use your DFT there.
-
-**When comparing:** experiment is at room temperature, while NEP and DFT are harmonic 0 K
-values. Expect differences of a few cm⁻¹ from temperature and anharmonicity, and more for the
-low-frequency interlayer modes (the bulk shear E2g and B1g), which are very sensitive to the
-interlayer distance. Check the lattice with `lattice_check.py` first.
-
 ## Output
 
 All output goes into `phonon_check/`:
@@ -143,7 +136,6 @@ phonon_check/
       strain_+0.010/ ...                    the same for every strain
 ```
 
-Each GPUMD folder keeps `model.xyz`, `run.in`, `thermo.out` and `gpumd.log`.
 `phonopy_params.yaml` can be loaded with phonopy's command line or Python API for anything
 the script does not do (other paths, thermal properties, animations).
 
@@ -157,8 +149,3 @@ the script does not do (other paths, thermal properties, animations).
 | `dump_force has been removed` | your `force_dump_line` still uses `dump_force`; use the default `dump_xyz 1 forces.xyz force` |
 | `forces.xyz not found` or `no force column` | your GPUMD writes forces differently; set `force_dump_line` and `force_file`. The file must be extended XYZ with a force column in `Properties=` |
 | `experimental dispersion not found` | put `serrano2007_fig2a_IXS.csv` next to the script or in the folder you run from |
-| `?` instead of a symmetry label in the Γ table | phonopy could not assign the irreducible representation, usually because small numerical noise splits a degenerate pair; that mode then gets no experimental value. The frequencies are still correct |
-| imaginary ZA modes of a few cm⁻¹ right at Γ | numerical artefact of finite supercells, not an instability |
-| larger imaginary modes at zero strain | the potential is not stable for this structure; check the relaxed structure with `check_hbn_structure.py`, and try a larger `supercell` |
-| DFT bands with K in the wrong place | your DFT cell uses γ = 60°; rebuild it with γ = 120° |
-| results did not change after editing a setting | settings that affect the calculation are part of the cache key; for anything else use `--force` |
