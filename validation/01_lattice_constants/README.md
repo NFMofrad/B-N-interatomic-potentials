@@ -15,34 +15,6 @@ All values are the potential's static 0 K minimum. One command computes everythi
 comparison table and saves it as text and CSV. Results are cached per potential, so comparing
 a new potential with an old one only runs the new one.
 
-## Requirements
-
-- Python 3.8+ with `numpy`
-- A GPUMD build. The default method needs box relaxation in `minimize`
-  (`minimize fire <tol> <steps> 1`), available in recent GPUMD versions. Older builds can
-  use `--method scan`.
-- A GPU node.
-
-## Setup
-
-Edit the `CONFIG` block at the top of `lattice_check.py` once:
-
-| Key | Default | Meaning |
-|---|---|---|
-| `gpumd` | `/scratch/work/.../GPUMD/src/gpumd` | path to the GPUMD executable |
-| `a0`, `c0`, `d0` | 2.504, 6.66, 3.33 Å | starting guesses for a, bulk c and the few-layer spacing |
-| `vacuum` | 20.0 Å | vacuum above and below the monolayer and the stacks |
-| `layers` | `(2, 3, 4)` | few-layer stacks between monolayer and bulk |
-| `dft_structures` | all `None` | optional: paths to your relaxed VASP CONTCARs (see below) |
-| `dft_values` | `{}` | optional: your DFT numbers, e.g. `{"bulk.c": 6.58}` |
-| `dft_label` | `DFT (yours)` | column name for your DFT, e.g. `PBE-D3(BJ), this work` |
-| `box_force_tol`, `box_max_steps` | 1e-5 eV/Å, 100000 | relaxation of atoms + box (`--method relax`) |
-| `minimize`, `force_tol`, `max_steps` | `sd`, 1e-5 eV/Å, 200000 | relaxation at fixed box (`--method scan`) |
-| `dump_line` | `dump_xyz 1 relaxed.xyz` | `run.in` line that saves the relaxed structure |
-| `nep_cutoff` | 6.0 Å | largest radial cutoff of your NEP |
-
-Every cell is built thicker than 2 × `nep_cutoff` in all directions, as GPUMD requires.
-
 ## Usage
 
 ```bash
