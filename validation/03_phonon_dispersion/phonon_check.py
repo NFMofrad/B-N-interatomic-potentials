@@ -33,11 +33,9 @@ Optional
     compared mode by mode. NAC (LO-TO splitting) is switched off for the comparison, because
     NEP has no long-range Coulomb term.
   - biaxial in-plane strains (CONFIG["biaxial_strains"], e.g. [-0.01, 0.01, 0.05, 0.10]):
-    dispersion of the strained structures (dynamic stability) and mode Grueneisen
-    parameters from the +-strain pair closest to zero.
+    dispersion of the strained structures (dynamic stability).
 
 Output (in phonon_check/)
-    summary_<names>.txt                    Gamma tables, stability, Grueneisen parameters
     phonons_<names>_bulk.png / _monolayer.png / _strain_<system>.png   dispersion plots
     <potential>/<system>/                  GPUMD runs, band.yaml, phonopy_params.yaml
                                            (re-usable with the phonopy command line)
@@ -80,7 +78,7 @@ CONFIG = {
 
     # optional: biaxial in-plane strains, e.g. [-0.01, 0.01, 0.05, 0.10]
     # (bulk: c kept at its equilibrium value)
-    "biaxial_strains": [-0.01, 0.01, 0.05, 0.10],
+    "biaxial_strains": [-0.05, -0.01, 0.01, 0.05, 0.10],
 
     # optional: your DFT phonons (phonopy + VASP). Either the folder of the phonopy run
     # (with phonopy_disp.yaml and FORCE_SETS) or a phonopy_params.yaml that contains forces.
@@ -562,21 +560,6 @@ def report(results, dft, tag):
                              + (("   <-- imaginary modes" + ("  (compression: expected buckling of the sheet)"
                                                              if float(e) < 0 else "  <-- instability"))
                                 if st[e]["min_freq"] * THZ['cm-1'] < -5 else ""))
-            neg = [e for e in eps if float(e) < 0]
-            pos = [e for e in eps if float(e) > 0]
-            if neg and pos:
-                em, ep = max(neg, key=float), min(pos, key=float)
-                g0 = r["systems"][s]["gamma"]
-                gm, gp = st[em]["gamma"], st[ep]["gamma"]
-                de = float(ep) - float(em)
-                lines.append(f"  mode Grueneisen parameters (biaxial, 2D: gamma = -(1/2w) dw/deps), "
-                             f"from {100 * float(em):+.1f} % and {100 * float(ep):+.1f} %:")
-                for i, m in enumerate(g0):
-                    if m["freq"] * THZ["cm-1"] < 20 or i >= len(gm) or i >= len(gp):
-                        continue
-                    dw = (gp[i]["freq"] - gm[i]["freq"]) / de
-                    lines.append(f"    {m['label']:<6} {m['freq'] * k:9.1f} {u}   gamma = "
-                                 f"{-dw / (2 * m['freq']):+.3f}   d(omega)/d(eps) = {dw * k / 100:+.2f} {u} per %")
             lines.append("")
     lines += ["Notes",
               "  Experiment (bulk, room temperature): " + SERRANO + "; dispersion: IXS points of",
@@ -588,7 +571,6 @@ def report(results, dft, tag):
               "  numerical artefact of finite supercells, not an instability."]
     txt = "\n".join(lines)
     print("\n" + txt)
-    open(os.path.join(OUT, f"summary_{tag}.txt"), "w").write(txt + "\n")
 
 
 # ----------------------------------------------------------------------------- plots

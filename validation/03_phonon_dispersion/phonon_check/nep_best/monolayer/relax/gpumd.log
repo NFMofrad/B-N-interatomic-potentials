@@ -19,9 +19,9 @@ GPU information:
 
 number of GPUs = 1
 Device id:                   0
-    Device name:             Tesla V100-PCIE-32GB
+    Device name:             Tesla V100-SXM2-16GB
     Compute capability:      7.0
-    Amount of global memory: 31.7325 GB
+    Amount of global memory: 15.7657 GB
     Number of SMs:           80
 
 ---------------------------------------------------------------
@@ -94,16 +94,16 @@ Start to do an energy minimization.
 
 Energy minimization with changed box started.
     step 0: total_potential = -870.0198688507 eV, f_max_atom = 0.0000224719 eV/A, pressure = 0.173128 GPa.
-    step 10000: total_potential = -870.0395574570 eV, f_max_atom = 0.0000236401 eV/A, pressure = 0.000000 GPa.
-    step 20000: total_potential = -870.0395541191 eV, f_max_atom = 0.0000274319 eV/A, pressure = 0.000001 GPa.
-    step 30000: total_potential = -870.0395526886 eV, f_max_atom = 0.0000189811 eV/A, pressure = 0.000000 GPa.
-    step 40000: total_potential = -870.0395903587 eV, f_max_atom = 0.0000379793 eV/A, pressure = -0.000005 GPa.
-    step 50000: total_potential = -870.0395607948 eV, f_max_atom = 0.0000199315 eV/A, pressure = 0.000001 GPa.
-    step 60000: total_potential = -870.0395565033 eV, f_max_atom = 0.0000227849 eV/A, pressure = 0.000001 GPa.
-    step 70000: total_potential = -870.0395426750 eV, f_max_atom = 0.0000258917 eV/A, pressure = -0.000000 GPa.
-    step 80000: total_potential = -870.0395636559 eV, f_max_atom = 0.0000291248 eV/A, pressure = 0.000000 GPa.
-    step 90000: total_potential = -870.0395593643 eV, f_max_atom = 0.0000269677 eV/A, pressure = 0.000000 GPa.
-    step 100000: total_potential = -870.0395493507 eV, f_max_atom = 0.0000274221 eV/A, pressure = 0.000001 GPa.
+    step 10000: total_potential = -870.0395960808 eV, f_max_atom = 0.0000512300 eV/A, pressure = -0.000005 GPa.
+    step 20000: total_potential = -870.0395541191 eV, f_max_atom = 0.0000216532 eV/A, pressure = 0.000001 GPa.
+    step 30000: total_potential = -870.0395994186 eV, f_max_atom = 0.0000422926 eV/A, pressure = -0.000005 GPa.
+    step 40000: total_potential = -870.0395593643 eV, f_max_atom = 0.0000228261 eV/A, pressure = 0.000000 GPa.
+    step 50000: total_potential = -870.0396060944 eV, f_max_atom = 0.0000394777 eV/A, pressure = -0.000005 GPa.
+    step 60000: total_potential = -870.0395464897 eV, f_max_atom = 0.0000211927 eV/A, pressure = 0.000000 GPa.
+    step 70000: total_potential = -870.0395445824 eV, f_max_atom = 0.0000292993 eV/A, pressure = -0.000000 GPa.
+    step 80000: total_potential = -870.0396027565 eV, f_max_atom = 0.0000501823 eV/A, pressure = -0.000005 GPa.
+    step 90000: total_potential = -870.0395617485 eV, f_max_atom = 0.0000212749 eV/A, pressure = 0.000001 GPa.
+    step 100000: total_potential = -870.0395913124 eV, f_max_atom = 0.0000531685 eV/A, pressure = -0.000005 GPa.
 Energy minimization finished.
 
 Initialized velocities with input T = 1e-06 K.
@@ -118,8 +118,8 @@ Run 1 steps.
     1 steps completed.
 
 ---------------------------------------------------------------
-Time used for this run = 0.0311301 second.
-Speed of this run = 3148.08 atom*step/second.
+Time used for this run = 0.00752912 second.
+Speed of this run = 13016.1 atom*step/second.
 ---------------------------------------------------------------
 
 
@@ -129,7 +129,7 @@ Finished executing the commands in run.in.
 
 
 ---------------------------------------------------------------
-Time used = 573.911781 s.
+Time used = 530.850159 s.
 ---------------------------------------------------------------
 
 

@@ -9,7 +9,7 @@ experiment and DFT.
 |---|---|
 | bulk hBN (AA′ stacking) | dispersion along Γ–M–K–Γ–A, B/N-projected DOS, Γ-point modes with symmetry labels vs Raman/infrared, deviation from the measured (IXS) dispersion |
 | monolayer hBN | dispersion along Γ–M–K–Γ, B/N-projected DOS, Γ-point modes with symmetry labels |
-| both, optional | dispersion under biaxial in-plane strain (dynamic stability), mode Grüneisen parameters |
+| both, optional | dispersion under biaxial in-plane strain (dynamic stability) |
 
 All values are harmonic, at 0 K, and computed at the potential's own relaxed lattice. One
 command computes everything, prints a summary, and saves the summary and the plots. Results
@@ -66,10 +66,6 @@ c stays at its equilibrium value. The full phonon calculation is repeated for ev
 - **Dynamic stability.** The lowest frequency on the path is listed for every strain.
   Imaginary (negative) modes under tension mean the structure is unstable there. Under
   compression, imaginary flexural (ZA) modes are expected: a compressed sheet buckles.
-- **Mode Grüneisen parameters** of the Γ-point modes, from the pair of strains closest to
-  zero on either side (one negative, one positive):
-  γ = −(1/2ω) dω/dε, the biaxial (2D) definition. Positive γ means the mode softens under
-  tension. Modes below 20 cm⁻¹ are skipped.
 
 A useful range is about −1 % to +10 %. Monolayer hBN stays stable to large tension in DFT, so
 imaginary modes at a few percent point to a problem with the potential, typically a lack of

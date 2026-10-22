@@ -1,0 +1,4876 @@
+nqpoint: 303    
+npath: 3      
+segment_nqpoint:
+- 101
+- 101
+- 101
+labels:
+- [ '$\Gamma$', 'M' ]
+- [ 'M', 'K' ]
+- [ 'K', '$\Gamma$' ]
+reciprocal_lattice:
+- [   0.41960980,   0.24226183,   0.00000000 ] # a*
+- [   0.00000000,   0.48452366,   0.00000000 ] # b*
+- [   0.00000000,   0.00000000,   0.04000000 ] # c*
+natom: 2      
+lattice:
+- [     2.383166470634289,     0.000000000000000,     0.000000000000000 ] # a
+- [    -1.191583235317144,     2.063882705016596,     0.000000000000000 ] # b
+- [     0.000000000000000,     0.000000000000000,    25.000000000000000 ] # c
+points:
+- symbol: B # 1
+  coordinates: [  0.000000000000000,  0.000000000000000,  0.500000000000000 ]
+  mass: 10.811000
+- symbol: N # 2
+  coordinates: [  0.333333333333333,  0.666666666666667,  0.500000000000000 ]
+  mass: 14.006700
+
+phonon:
+- q-position: [    0.0000000,    0.0000000,    0.0000000 ]
+  distance:    0.0000000
+  band:
+  - # 1
+    frequency:   -0.0000004909
+  - # 2
+    frequency:    0.0000002416
+  - # 3
+    frequency:    0.0000006294
+  - # 4
+    frequency:   22.7587856046
+  - # 5
+    frequency:   50.0594104425
+  - # 6
+    frequency:   50.0594104425
+
+- q-position: [    0.0050000,    0.0000000,    0.0000000 ]
+  distance:    0.0024226
+  band:
+  - # 1
+    frequency:   -0.1266259297
+  - # 2
+    frequency:    0.2988537337
+  - # 3
+    frequency:    0.5247641694
+  - # 4
+    frequency:   22.7582548613
+  - # 5
+    frequency:   50.0585948835
+  - # 6
+    frequency:   50.0648539275
+
+- q-position: [    0.0100000,    0.0000000,    0.0000000 ]
+  distance:    0.0048452
+  band:
+  - # 1
+    frequency:   -0.2531754705
+  - # 2
+    frequency:    0.5975808942
+  - # 3
+    frequency:    1.0494485861
+  - # 4
+    frequency:   22.7566610331
+  - # 5
+    frequency:   50.0561485680
+  - # 6
+    frequency:   50.0811431062
+
+- q-position: [    0.0150000,    0.0000000,    0.0000000 ]
+  distance:    0.0072679
+  band:
+  - # 1
+    frequency:   -0.3795722527
+  - # 2
+    frequency:    0.8960550143
+  - # 3
+    frequency:    1.5739735442
+  - # 4
+    frequency:   22.7539993327
+  - # 5
+    frequency:   50.0520725910
+  - # 6
+    frequency:   50.1081545936
+
+- q-position: [    0.0200000,    0.0000000,    0.0000000 ]
+  distance:    0.0096905
+  band:
+  - # 1
+    frequency:   -0.5057399439
+  - # 2
+    frequency:    1.1941498389
+  - # 3
+    frequency:    2.0982594314
+  - # 4
+    frequency:   22.7502618063
+  - # 5
+    frequency:   50.0463688111
+  - # 6
+    frequency:   50.1456842186
+
+- q-position: [    0.0250000,    0.0000000,    0.0000000 ]
+  distance:    0.0121131
+  band:
+  - # 1
+    frequency:   -0.6316022683
+  - # 2
+    frequency:    1.4917394315
+  - # 3
+    frequency:    2.6222267759
+  - # 4
+    frequency:   22.7454373717
+  - # 5
+    frequency:   50.0390398995
+  - # 6
+    frequency:   50.1934492002
+
+- q-position: [    0.0300000,    0.0000000,    0.0000000 ]
+  distance:    0.0145357
+  band:
+  - # 1
+    frequency:   -0.7570830246
+  - # 2
+    frequency:    1.7886982819
+  - # 3
+    frequency:    3.1457962929
+  - # 4
+    frequency:   22.7395118704
+  - # 5
+    frequency:   50.0300894080
+  - # 6
+    frequency:   50.2510911405
+
+- q-position: [    0.0350000,    0.0000000,    0.0000000 ]
+  distance:    0.0169583
+  band:
+  - # 1
+    frequency:   -0.8821061040
+  - # 2
+    frequency:    2.0849014141
+  - # 3
+    frequency:    3.6688889314
+  - # 4
+    frequency:   22.7324681348
+  - # 5
+    frequency:   50.0195218545
+  - # 6
+    frequency:   50.3181797770
+
+- q-position: [    0.0400000,    0.0000000,    0.0000000 ]
+  distance:    0.0193809
+  band:
+  - # 1
+    frequency:   -1.0065955072
+  - # 2
+    frequency:    2.3802244959
+  - # 3
+    frequency:    4.1914259204
+  - # 4
+    frequency:   22.7242860696
+  - # 5
+    frequency:   50.0073428230
+  - # 6
+    frequency:   50.3942174317
+
+- q-position: [    0.0450000,    0.0000000,    0.0000000 ]
+  distance:    0.0218036
+  band:
+  - # 1
+    frequency:   -1.1304753618
+  - # 2
+    frequency:    2.6745439495
+  - # 3
+    frequency:    4.7133288146
+  - # 4
+    frequency:   22.7149427468
+  - # 5
+    frequency:   49.9935590779
+  - # 6
+    frequency:   50.4786440784
+
+- q-position: [    0.0500000,    0.0000000,    0.0000000 ]
+  distance:    0.0242262
+  band:
+  - # 1
+    frequency:   -1.2536699376
+  - # 2
+    frequency:    2.9677370626
+  - # 3
+    frequency:    5.2345195390
+  - # 4
+    frequency:   22.7044125145
+  - # 5
+    frequency:   49.9781786898
+  - # 6
+    frequency:   50.5708429445
+
+- q-position: [    0.0550000,    0.0000000,    0.0000000 ]
+  distance:    0.0266488
+  band:
+  - # 1
+    frequency:   -1.3761036625
+  - # 2
+    frequency:    3.2596821020
+  - # 3
+    frequency:    5.7549204324
+  - # 4
+    frequency:   22.6926671180
+  - # 5
+    frequency:   49.9612111699
+  - # 6
+    frequency:   50.6701465572
+
+- q-position: [    0.0600000,    0.0000000,    0.0000000 ]
+  distance:    0.0290714
+  band:
+  - # 1
+    frequency:   -1.4977011364
+  - # 2
+    frequency:    3.5502584273
+  - # 3
+    frequency:    6.2744542893
+  - # 4
+    frequency:   22.6796758336
+  - # 5
+    frequency:   49.9426676109
+  - # 6
+    frequency:   50.7758431396
+
+- q-position: [    0.0650000,    0.0000000,    0.0000000 ]
+  distance:    0.0314940
+  band:
+  - # 1
+    frequency:   -1.6183871454
+  - # 2
+    frequency:    3.8393466058
+  - # 3
+    frequency:    6.7930443992
+  - # 4
+    frequency:   22.6654056143
+  - # 5
+    frequency:   49.9225608315
+  - # 6
+    frequency:   50.8871832639
+
+- q-position: [    0.0700000,    0.0000000,    0.0000000 ]
+  distance:    0.0339167
+  band:
+  - # 1
+    frequency:   -1.7380866739
+  - # 2
+    frequency:    4.1268285285
+  - # 3
+    frequency:    7.3106145835
+  - # 4
+    frequency:   22.6498212460
+  - # 5
+    frequency:   49.9009055216
+  - # 6
+    frequency:   51.0033866655
+
+- q-position: [    0.0750000,    0.0000000,    0.0000000 ]
+  distance:    0.0363393
+  band:
+  - # 1
+    frequency:   -1.8567249164
+  - # 2
+    frequency:    4.4125875265
+  - # 3
+    frequency:    7.8270892295
+  - # 4
+    frequency:   22.6328855145
+  - # 5
+    frequency:   49.8777183852
+  - # 6
+    frequency:   51.1236491299
+
+- q-position: [    0.0800000,    0.0000000,    0.0000000 ]
+  distance:    0.0387619
+  band:
+  - # 1
+    frequency:   -1.9742272883
+  - # 2
+    frequency:    4.6965084869
+  - # 3
+    frequency:    8.3423933204
+  - # 4
+    frequency:   22.6145593820
+  - # 5
+    frequency:   49.8530182779
+  - # 6
+    frequency:   51.2471493652
+
+- q-position: [    0.0850000,    0.0000000,    0.0000000 ]
+  distance:    0.0411845
+  band:
+  - # 1
+    frequency:   -2.0905194356
+  - # 2
+    frequency:    4.9784779696
+  - # 3
+    frequency:    8.8564524618
+  - # 4
+    frequency:   22.5948021722
+  - # 5
+    frequency:   49.8268263371
+  - # 6
+    frequency:   51.3730557804
+
+- q-position: [    0.0900000,    0.0000000,    0.0000000 ]
+  distance:    0.0436071
+  band:
+  - # 1
+    frequency:   -2.2055272431
+  - # 2
+    frequency:    5.2583843226
+  - # 3
+    frequency:    9.3691929036
+  - # 4
+    frequency:   22.5735717646
+  - # 5
+    frequency:   49.7991661001
+  - # 6
+    frequency:   51.5005330969
+
+- q-position: [    0.0950000,    0.0000000,    0.0000000 ]
+  distance:    0.0460297
+  band:
+  - # 1
+    frequency:   -2.3191768425
+  - # 2
+    frequency:    5.5361177960
+  - # 3
+    frequency:    9.8805415585
+  - # 4
+    frequency:   22.5508247945
+  - # 5
+    frequency:   49.7700636098
+  - # 6
+    frequency:   51.6287487289
+
+- q-position: [    0.1000000,    0.0000000,    0.0000000 ]
+  distance:    0.0484524
+  band:
+  - # 1
+    frequency:   -2.4313946188
+  - # 2
+    frequency:    5.8115706547
+  - # 3
+    frequency:   10.3904260149
+  - # 4
+    frequency:   22.5265168611
+  - # 5
+    frequency:   49.7395475037
+  - # 6
+    frequency:   51.7568788737
+
+- q-position: [    0.1050000,    0.0000000,    0.0000000 ]
+  distance:    0.0508750
+  band:
+  - # 1
+    frequency:   -2.5421072157
+  - # 2
+    frequency:    6.0846372886
+  - # 3
+    frequency:   10.8987745466
+  - # 4
+    frequency:   22.5006027406
+  - # 5
+    frequency:   49.7076490849
+  - # 6
+    frequency:   51.8841142658
+
+- q-position: [    0.1100000,    0.0000000,    0.0000000 ]
+  distance:    0.0532976
+  band:
+  - # 1
+    frequency:   -2.6512415407
+  - # 2
+    frequency:    6.3552143193
+  - # 3
+    frequency:   11.4055161177
+  - # 4
+    frequency:   22.4730366046
+  - # 5
+    frequency:   49.6744023724
+  - # 6
+    frequency:   52.0096655529
+
+- q-position: [    0.1150000,    0.0000000,    0.0000000 ]
+  distance:    0.0557202
+  band:
+  - # 1
+    frequency:   -2.7587247687
+  - # 2
+    frequency:    6.6232007039
+  - # 3
+    frequency:   11.9105803844
+  - # 4
+    frequency:   22.4437722427
+  - # 5
+    frequency:   49.6398441304
+  - # 6
+    frequency:   52.1327682615
+
+- q-position: [    0.1200000,    0.0000000,    0.0000000 ]
+  distance:    0.0581428
+  band:
+  - # 1
+    frequency:   -2.8644843449
+  - # 2
+    frequency:    6.8884978340
+  - # 3
+    frequency:   12.4138976931
+  - # 4
+    frequency:   22.4127632887
+  - # 5
+    frequency:   49.6040138732
+  - # 6
+    frequency:   52.2526873292
+
+- q-position: [    0.1250000,    0.0000000,    0.0000000 ]
+  distance:    0.0605655
+  band:
+  - # 1
+    frequency:   -2.9684479869
+  - # 2
+    frequency:    7.1510096302
+  - # 3
+    frequency:   12.9153990758
+  - # 4
+    frequency:   22.3799634497
+  - # 5
+    frequency:   49.5669538462
+  - # 6
+    frequency:   52.3687211827
+
+- q-position: [    0.1300000,    0.0000000,    0.0000000 ]
+  distance:    0.0629881
+  band:
+  - # 1
+    frequency:   -3.0705436867
+  - # 2
+    frequency:    7.4106426312
+  - # 3
+    frequency:   13.4150162442
+  - # 4
+    frequency:   22.3453267371
+  - # 5
+    frequency:   49.5287089823
+  - # 6
+    frequency:   52.4802053538
+
+- q-position: [    0.1350000,    0.0000000,    0.0000000 ]
+  distance:    0.0654107
+  band:
+  - # 1
+    frequency:   -3.1706997112
+  - # 2
+    frequency:    7.6673060763
+  - # 3
+    frequency:   13.9126815815
+  - # 4
+    frequency:   22.3088076992
+  - # 5
+    frequency:   49.4893268325
+  - # 6
+    frequency:   52.5865156256
+
+- q-position: [    0.1400000,    0.0000000,    0.0000000 ]
+  distance:    0.0678333
+  band:
+  - # 1
+    frequency:   -3.2688446028
+  - # 2
+    frequency:    7.9209119824
+  - # 3
+    frequency:   14.4083281346
+  - # 4
+    frequency:   22.2703616549
+  - # 5
+    frequency:   49.4488574718
+  - # 6
+    frequency:   52.6870707099
+
+- q-position: [    0.1450000,    0.0000000,    0.0000000 ]
+  distance:    0.0702559
+  band:
+  - # 1
+    frequency:   -3.3649071797
+  - # 2
+    frequency:    8.1713752136
+  - # 3
+    frequency:   14.9018896062
+  - # 4
+    frequency:   22.2299449270
+  - # 5
+    frequency:   49.4073533803
+  - # 6
+    frequency:   52.7813344590
+
+- q-position: [    0.1500000,    0.0000000,    0.0000000 ]
+  distance:    0.0726785
+  band:
+  - # 1
+    frequency:   -3.4588165356
+  - # 2
+    frequency:    8.4186135437
+  - # 3
+    frequency:   15.3933003484
+  - # 4
+    frequency:   22.1875150760
+  - # 5
+    frequency:   49.3648693003
+  - # 6
+    frequency:   52.8688176217
+
+- q-position: [    0.1550000,    0.0000000,    0.0000000 ]
+  distance:    0.0751012
+  band:
+  - # 1
+    frequency:   -3.5505020398
+  - # 2
+    frequency:    8.6625477111
+  - # 3
+    frequency:   15.8824953579
+  - # 4
+    frequency:   22.1430311325
+  - # 5
+    frequency:   49.3214620720
+  - # 6
+    frequency:   52.9490791536
+
+- q-position: [    0.1600000,    0.0000000,    0.0000000 ]
+  distance:    0.0775238
+  band:
+  - # 1
+    frequency:   -3.6398933371
+  - # 2
+    frequency:    8.9031014665
+  - # 3
+    frequency:   16.3694102747
+  - # 4
+    frequency:   22.0964538286
+  - # 5
+    frequency:   49.2771904472
+  - # 6
+    frequency:   53.0217270970
+
+- q-position: [    0.1650000,    0.0000000,    0.0000000 ]
+  distance:    0.0799464
+  band:
+  - # 1
+    frequency:   -3.7269203481
+  - # 2
+    frequency:    9.1402016133
+  - # 3
+    frequency:   16.8539813832
+  - # 4
+    frequency:   22.0477458277
+  - # 5
+    frequency:   49.2321148850
+  - # 6
+    frequency:   53.0864190467
+
+- q-position: [    0.1700000,    0.0000000,    0.0000000 ]
+  distance:    0.0823690
+  band:
+  - # 1
+    frequency:   -3.8115132701
+  - # 2
+    frequency:    9.3737780391
+  - # 3
+    frequency:   17.3361456182
+  - # 4
+    frequency:   21.9968719520
+  - # 5
+    frequency:   49.1862973302
+  - # 6
+    frequency:   53.1428622214
+
+- q-position: [    0.1750000,    0.0000000,    0.0000000 ]
+  distance:    0.0847916
+  band:
+  - # 1
+    frequency:   -3.8936025786
+  - # 2
+    frequency:    9.6037637421
+  - # 3
+    frequency:   17.8158405750
+  - # 4
+    frequency:   21.9437994080
+  - # 5
+    frequency:   49.1398009779
+  - # 6
+    frequency:   53.1908131596
+
+- q-position: [    0.1800000,    0.0000000,    0.0000000 ]
+  distance:    0.0872143
+  band:
+  - # 1
+    frequency:   -3.9731190302
+  - # 2
+    frequency:    9.8300948484
+  - # 3
+    frequency:   18.2930045240
+  - # 4
+    frequency:   21.8884980095
+  - # 5
+    frequency:   49.0926900267
+  - # 6
+    frequency:   53.2300770638
+
+- q-position: [    0.1850000,    0.0000000,    0.0000000 ]
+  distance:    0.0896369
+  band:
+  - # 1
+    frequency:   -4.0499936668
+  - # 2
+    frequency:   10.0527106247
+  - # 3
+    frequency:   18.7675764303
+  - # 4
+    frequency:   21.8309403972
+  - # 5
+    frequency:   49.0450294232
+  - # 6
+    frequency:   53.2605068134
+
+- q-position: [    0.1900000,    0.0000000,    0.0000000 ]
+  distance:    0.0920595
+  band:
+  - # 1
+    frequency:   -4.1241578206
+  - # 2
+    frequency:   10.2715534835
+  - # 3
+    frequency:   19.2394959781
+  - # 4
+    frequency:   21.7711022563
+  - # 5
+    frequency:   48.9968846009
+  - # 6
+    frequency:   53.2820016730
+
+- q-position: [    0.1950000,    0.0000000,    0.0000000 ]
+  distance:    0.0944821
+  band:
+  - # 1
+    frequency:   -4.1955431229
+  - # 2
+    frequency:   10.4865689846
+  - # 3
+    frequency:   19.7087035995
+  - # 4
+    frequency:   21.7089625304
+  - # 5
+    frequency:   48.9483212167
+  - # 6
+    frequency:   53.2945057172
+
+- q-position: [    0.2000000,    0.0000000,    0.0000000 ]
+  distance:    0.0969047
+  band:
+  - # 1
+    frequency:   -4.2640815136
+  - # 2
+    frequency:   10.6977058309
+  - # 3
+    frequency:   20.1751405067
+  - # 4
+    frequency:   21.6445036326
+  - # 5
+    frequency:   48.8994048882
+  - # 6
+    frequency:   53.2980060003
+
+- q-position: [    0.2050000,    0.0000000,    0.0000000 ]
+  distance:    0.0993274
+  band:
+  - # 1
+    frequency:   -4.3297052554
+  - # 2
+    frequency:   10.9049158615
+  - # 3
+    frequency:   20.6387487282
+  - # 4
+    frequency:   21.5777116541
+  - # 5
+    frequency:   48.8502009347
+  - # 6
+    frequency:   53.2925304933
+
+- q-position: [    0.2100000,    0.0000000,    0.0000000 ]
+  distance:    0.1017500
+  band:
+  - # 1
+    frequency:   -4.3923469499
+  - # 2
+    frequency:   11.1081540424
+  - # 3
+    frequency:   21.0994711464
+  - # 4
+    frequency:   21.5085765688
+  - # 5
+    frequency:   48.8007741247
+  - # 6
+    frequency:   53.2781458168
+
+- q-position: [    0.2150000,    0.0000000,    0.0000000 ]
+  distance:    0.1041726
+  band:
+  - # 1
+    frequency:   -4.4519395595
+  - # 2
+    frequency:   11.3073784549
+  - # 3
+    frequency:   21.4370924363
+  - # 4
+    frequency:   21.5572515368
+  - # 5
+    frequency:   48.7511884341
+  - # 6
+    frequency:   53.2549547933
+
+- q-position: [    0.2200000,    0.0000000,    0.0000000 ]
+  distance:    0.1065952
+  band:
+  - # 1
+    frequency:   -4.5084164334
+  - # 2
+    frequency:   11.5025502841
+  - # 3
+    frequency:   21.3632576020
+  - # 4
+    frequency:   22.0120346057
+  - # 5
+    frequency:   48.7015068158
+  - # 6
+    frequency:   53.2230938478
+
+- q-position: [    0.2250000,    0.0000000,    0.0000000 ]
+  distance:    0.1090178
+  band:
+  - # 1
+    frequency:   -4.5617113389
+  - # 2
+    frequency:   11.6936338086
+  - # 3
+    frequency:   21.2870748941
+  - # 4
+    frequency:   22.4637660272
+  - # 5
+    frequency:   48.6517909852
+  - # 6
+    frequency:   53.1827302812
+
+- q-position: [    0.2300000,    0.0000000,    0.0000000 ]
+  distance:    0.1114404
+  band:
+  - # 1
+    frequency:   -4.6117585006
+  - # 2
+    frequency:   11.8805963906
+  - # 3
+    frequency:   21.2085518197
+  - # 4
+    frequency:   22.9123924747
+  - # 5
+    frequency:   48.6021012228
+  - # 6
+    frequency:   53.1340594441
+
+- q-position: [    0.2350000,    0.0000000,    0.0000000 ]
+  distance:    0.1138631
+  band:
+  - # 1
+    frequency:   -4.6584926463
+  - # 2
+    frequency:   12.0634084705
+  - # 3
+    frequency:   21.1277007589
+  - # 4
+    frequency:   23.3578616466
+  - # 5
+    frequency:   48.5524961963
+  - # 6
+    frequency:   53.0773018370
+
+- q-position: [    0.2400000,    0.0000000,    0.0000000 ]
+  distance:    0.1162857
+  band:
+  - # 1
+    frequency:   -4.7018490622
+  - # 2
+    frequency:   12.2420435638
+  - # 3
+    frequency:   21.0445391572
+  - # 4
+    frequency:   23.8001222843
+  - # 5
+    frequency:   48.5030328038
+  - # 6
+    frequency:   53.0127001638
+
+- q-position: [    0.2450000,    0.0000000,    0.0000000 ]
+  distance:    0.1187083
+  band:
+  - # 1
+    frequency:   -4.7417636579
+  - # 2
+    frequency:   12.4164782641
+  - # 3
+    frequency:   20.9590897178
+  - # 4
+    frequency:   24.2391241781
+  - # 5
+    frequency:   48.4537660395
+  - # 6
+    frequency:   52.9405163645
+
+- q-position: [    0.2500000,    0.0000000,    0.0000000 ]
+  distance:    0.1211309
+  band:
+  - # 1
+    frequency:   -4.7781730443
+  - # 2
+    frequency:   12.5866922506
+  - # 3
+    frequency:   20.8713805927
+  - # 4
+    frequency:   24.6748181597
+  - # 5
+    frequency:   48.4047488834
+  - # 6
+    frequency:   52.8610286526
+
+- q-position: [    0.2550000,    0.0000000,    0.0000000 ]
+  distance:    0.1235535
+  band:
+  - # 1
+    frequency:   -4.8110146233
+  - # 2
+    frequency:   12.7526683025
+  - # 3
+    frequency:   20.7814455754
+  - # 4
+    frequency:   25.1071560790
+  - # 5
+    frequency:   48.3560322145
+  - # 6
+    frequency:   52.7745285844
+
+- q-position: [    0.2600000,    0.0000000,    0.0000000 ]
+  distance:    0.1259762
+  band:
+  - # 1
+    frequency:   -4.8402266944
+  - # 2
+    frequency:   12.9143923199
+  - # 3
+    frequency:   20.6893242927
+  - # 4
+    frequency:   25.5360907605
+  - # 5
+    frequency:   48.3076647489
+  - # 6
+    frequency:   52.6813181823
+
+- q-position: [    0.2650000,    0.0000000,    0.0000000 ]
+  distance:    0.1283988
+  band:
+  - # 1
+    frequency:   -4.8657485784
+  - # 2
+    frequency:   13.0718533521
+  - # 3
+    frequency:   20.5950623995
+  - # 4
+    frequency:   25.9615759381
+  - # 5
+    frequency:   48.2596930028
+  - # 6
+    frequency:   52.5817071397
+
+- q-position: [    0.2700000,    0.0000000,    0.0000000 ]
+  distance:    0.1308214
+  band:
+  - # 1
+    frequency:   -4.8875207613
+  - # 2
+    frequency:   13.2250436325
+  - # 3
+    frequency:   20.4987117742
+  - # 4
+    frequency:   26.3835661635
+  - # 5
+    frequency:   48.2121612781
+  - # 6
+    frequency:   52.4760101280
+
+- q-position: [    0.2750000,    0.0000000,    0.0000000 ]
+  distance:    0.1332440
+  band:
+  - # 1
+    frequency:   -4.9054850615
+  - # 2
+    frequency:   13.3739586208
+  - # 3
+    frequency:   20.4003307174
+  - # 4
+    frequency:   26.8020166867
+  - # 5
+    frequency:   48.1651116729
+  - # 6
+    frequency:   52.3645442302
+
+- q-position: [    0.2800000,    0.0000000,    0.0000000 ]
+  distance:    0.1356666
+  band:
+  - # 1
+    frequency:   -4.9195848232
+  - # 2
+    frequency:   13.5185970521
+  - # 3
+    frequency:   20.2999841537
+  - # 4
+    frequency:   27.2168833034
+  - # 5
+    frequency:   48.1185841125
+  - # 6
+    frequency:   52.2476265223
+
+- q-position: [    0.2850000,    0.0000000,    0.0000000 ]
+  distance:    0.1380892
+  band:
+  - # 1
+    frequency:   -4.9297651403
+  - # 2
+    frequency:   13.6589609913
+  - # 3
+    frequency:   20.1977438373
+  - # 4
+    frequency:   27.6281221672
+  - # 5
+    frequency:   48.0726164019
+  - # 6
+    frequency:   52.1255718211
+
+- q-position: [    0.2900000,    0.0000000,    0.0000000 ]
+  distance:    0.1405119
+  band:
+  - # 1
+    frequency:   -4.9359731140
+  - # 2
+    frequency:   13.7950558931
+  - # 3
+    frequency:   20.0936885609
+  - # 4
+    frequency:   28.0356895621
+  - # 5
+    frequency:   48.0272442967
+  - # 6
+    frequency:   51.9986906198
+
+- q-position: [    0.2950000,    0.0000000,    0.0000000 ]
+  distance:    0.1429345
+  band:
+  - # 1
+    frequency:   -4.9381581504
+  - # 2
+    frequency:   13.9268906654
+  - # 3
+    frequency:   19.9879043704
+  - # 4
+    frequency:   28.4395416323
+  - # 5
+    frequency:   47.9825015913
+  - # 6
+    frequency:   51.8672872272
+
+- q-position: [    0.3000000,    0.0000000,    0.0000000 ]
+  distance:    0.1453571
+  band:
+  - # 1
+    frequency:   -4.9362723019
+  - # 2
+    frequency:   14.0544777350
+  - # 3
+    frequency:   19.8804847841
+  - # 4
+    frequency:   28.8396340641
+  - # 5
+    frequency:   47.9384202215
+  - # 6
+    frequency:   51.7316581269
+
+- q-position: [    0.3050000,    0.0000000,    0.0000000 ]
+  distance:    0.1477797
+  band:
+  - # 1
+    frequency:   -4.9302706596
+  - # 2
+    frequency:   14.1778331143
+  - # 3
+    frequency:   19.7715310163
+  - # 4
+    frequency:   29.2359217169
+  - # 5
+    frequency:   47.8950303794
+  - # 6
+    frequency:   51.5920905707
+
+- q-position: [    0.3100000,    0.0000000,    0.0000000 ]
+  distance:    0.1502023
+  band:
+  - # 1
+    frequency:   -4.9201118035
+  - # 2
+    frequency:   14.2969764653
+  - # 3
+    frequency:   19.6611522071
+  - # 4
+    frequency:   29.6283581968
+  - # 5
+    frequency:   47.8523606393
+  - # 6
+    frequency:   51.4488614208
+
+- q-position: [    0.3150000,    0.0000000,    0.0000000 ]
+  distance:    0.1526250
+  band:
+  - # 1
+    frequency:   -4.9057583185
+  - # 2
+    frequency:   14.4119311611
+  - # 3
+    frequency:   19.5494656559
+  - # 4
+    frequency:   30.0168953694
+  - # 5
+    frequency:   47.8104380896
+  - # 6
+    frequency:   51.3022362497
+
+- q-position: [    0.3200000,    0.0000000,    0.0000000 ]
+  distance:    0.1550476
+  band:
+  - # 1
+    frequency:   -4.8871773845
+  - # 2
+    frequency:   14.5227243400
+  - # 3
+    frequency:   19.4365970594
+  - # 4
+    frequency:   30.4014828038
+  - # 5
+    frequency:   47.7692884710
+  - # 6
+    frequency:   51.1524687099
+
+- q-position: [    0.3250000,    0.0000000,    0.0000000 ]
+  distance:    0.1574702
+  band:
+  - # 1
+    frequency:   -4.8643414517
+  - # 2
+    frequency:   14.6293869513
+  - # 3
+    frequency:   19.3226807530
+  - # 4
+    frequency:   30.7820671424
+  - # 5
+    frequency:   47.7289363166
+  - # 6
+    frequency:   50.9998001826
+
+- q-position: [    0.3300000,    0.0000000,    0.0000000 ]
+  distance:    0.1598928
+  band:
+  - # 1
+    frequency:   -4.8372290117
+  - # 2
+    frequency:   14.7319537891
+  - # 3
+    frequency:   19.2078599532
+  - # 4
+    frequency:   31.1585913862
+  - # 5
+    frequency:   47.6894050917
+  - # 6
+    frequency:   50.8444597121
+
+- q-position: [    0.3350000,    0.0000000,    0.0000000 ]
+  distance:    0.1623154
+  band:
+  - # 1
+    frequency:   -4.8058254779
+  - # 2
+    frequency:   14.8304635110
+  - # 3
+    frequency:   19.0922869999
+  - # 4
+    frequency:   31.5309940886
+  - # 5
+    frequency:   47.6507173320
+  - # 6
+    frequency:   50.6866642354
+
+- q-position: [    0.3400000,    0.0000000,    0.0000000 ]
+  distance:    0.1647380
+  band:
+  - # 1
+    frequency:   -4.7701241891
+  - # 2
+    frequency:   14.9249586403
+  - # 3
+    frequency:   18.9761235953
+  - # 4
+    frequency:   31.8992084429
+  - # 5
+    frequency:   47.6128947765
+  - # 6
+    frequency:   50.5266191131
+
+- q-position: [    0.3450000,    0.0000000,    0.0000000 ]
+  distance:    0.1671607
+  band:
+  - # 1
+    frequency:   -4.7301275533
+  - # 2
+    frequency:   15.0154855458
+  - # 3
+    frequency:   18.8595410363
+  - # 4
+    frequency:   32.2631612518
+  - # 5
+    frequency:   47.5759584942
+  - # 6
+    frequency:   50.3645189711
+
+- q-position: [    0.3500000,    0.0000000,    0.0000000 ]
+  distance:    0.1695833
+  band:
+  - # 1
+    frequency:   -4.6858483485
+  - # 2
+    frequency:   15.1020944002
+  - # 3
+    frequency:   18.7427204346
+  - # 4
+    frequency:   32.6227717602
+  - # 5
+    frequency:   47.5399290021
+  - # 6
+    frequency:   50.2005488619
+
+- q-position: [    0.3550000,    0.0000000,    0.0000000 ]
+  distance:    0.1720059
+  band:
+  - # 1
+    frequency:   -4.6373112023
+  - # 2
+    frequency:   15.1848391106
+  - # 3
+    frequency:   18.6258529206
+  - # 4
+    frequency:   32.9779503310
+  - # 5
+    frequency:   47.5048263728
+  - # 6
+    frequency:   50.0348857567
+
+- q-position: [    0.3600000,    0.0000000,    0.0000000 ]
+  distance:    0.1744285
+  band:
+  - # 1
+    frequency:   -4.5845542718
+  - # 2
+    frequency:   15.2637772215
+  - # 3
+    frequency:   18.5091398231
+  - # 4
+    frequency:   33.3285969390
+  - # 5
+    frequency:   47.4706703308
+  - # 6
+    frequency:   49.8677003843
+
+- q-position: [    0.3650000,    0.0000000,    0.0000000 ]
+  distance:    0.1768511
+  band:
+  - # 1
+    frequency:   -4.5276311481
+  - # 2
+    frequency:   15.3389697859
+  - # 3
+    frequency:   18.3927928155
+  - # 4
+    frequency:   33.6745994517
+  - # 5
+    frequency:   47.4374803356
+  - # 6
+    frequency:   49.6991594328
+
+- q-position: [    0.3700000,    0.0000000,    0.0000000 ]
+  distance:    0.1792738
+  band:
+  - # 1
+    frequency:   -4.4666130123
+  - # 2
+    frequency:   15.4104812039
+  - # 3
+    frequency:   18.2770340211
+  - # 4
+    frequency:   34.0158316592
+  - # 5
+    frequency:   47.4052756513
+  - # 6
+    frequency:   49.5294281419
+
+- q-position: [    0.3750000,    0.0000000,    0.0000000 ]
+  distance:    0.1816964
+  band:
+  - # 1
+    frequency:   -4.4015910730
+  - # 2
+    frequency:   15.4783790264
+  - # 3
+    frequency:   18.1620960624
+  - # 4
+    frequency:   34.3521510097
+  - # 5
+    frequency:   47.3740754018
+  - # 6
+    frequency:   49.3586733136
+
+- q-position: [    0.3800000,    0.0000000,    0.0000000 ]
+  distance:    0.1841190
+  band:
+  - # 1
+    frequency:   -4.3326793132
+  - # 2
+    frequency:   15.5427337231
+  - # 3
+    frequency:   18.0482220433
+  - # 4
+    frequency:   34.6833959940
+  - # 5
+    frequency:   47.3438986108
+  - # 6
+    frequency:   49.1870667838
+
+- q-position: [    0.3850000,    0.0000000,    0.0000000 ]
+  distance:    0.1865416
+  band:
+  - # 1
+    frequency:   -4.2600175805
+  - # 2
+    frequency:   15.6036184142
+  - # 3
+    frequency:   17.9356654477
+  - # 4
+    frequency:   35.0093831160
+  - # 5
+    frequency:   47.3147642271
+  - # 6
+    frequency:   49.0147894037
+
+- q-position: [    0.3900000,    0.0000000,    0.0000000 ]
+  distance:    0.1889642
+  band:
+  - # 1
+    frequency:   -4.1837750499
+  - # 2
+    frequency:   15.6611085652
+  - # 3
+    frequency:   17.8246899359
+  - # 4
+    frequency:   35.3299033701
+  - # 5
+    frequency:   47.2866911351
+  - # 6
+    frequency:   48.8420355938
+
+- q-position: [    0.3950000,    0.0000000,    0.0000000 ]
+  distance:    0.1913868
+  band:
+  - # 1
+    frequency:   -4.1041540884
+  - # 2
+    frequency:   15.7152816455
+  - # 3
+    frequency:   17.7155690208
+  - # 4
+    frequency:   35.6447181348
+  - # 5
+    frequency:   47.2596981503
+  - # 6
+    frequency:   48.6690185466
+
+- q-position: [    0.4000000,    0.0000000,    0.0000000 ]
+  distance:    0.1938095
+  band:
+  - # 1
+    frequency:   -4.0213945456
+  - # 2
+    frequency:   15.7662167523
+  - # 3
+    frequency:   17.6085856019
+  - # 4
+    frequency:   35.9535543772
+  - # 5
+    frequency:   47.2338040012
+  - # 6
+    frequency:   48.4959761694
+
+- q-position: [    0.4050000,    0.0000000,    0.0000000 ]
+  distance:    0.1962321
+  band:
+  - # 1
+    frequency:   -3.9357784827
+  - # 2
+    frequency:   15.8139942000
+  - # 3
+    frequency:   17.5040313339
+  - # 4
+    frequency:   36.2560990484
+  - # 5
+    frequency:   47.2090272979
+  - # 6
+    frequency:   48.3231778723
+
+- q-position: [    0.4100000,    0.0000000,    0.0000000 ]
+  distance:    0.1986547
+  band:
+  - # 1
+    frequency:   -3.8476353385
+  - # 2
+    frequency:   15.8586950795
+  - # 3
+    frequency:   17.4022058083
+  - # 4
+    frequency:   36.5519925367
+  - # 5
+    frequency:   47.1853864881
+  - # 6
+    frequency:   48.1509323192
+
+- q-position: [    0.4150000,    0.0000000,    0.0000000 ]
+  distance:    0.2010773
+  band:
+  - # 1
+    frequency:   -3.7573475018
+  - # 2
+    frequency:   15.9004007883
+  - # 3
+    frequency:   17.3034155225
+  - # 4
+    frequency:   36.8408210431
+  - # 5
+    frequency:   47.1628998022
+  - # 6
+    frequency:   47.9795962668
+
+- q-position: [    0.4200000,    0.0000000,    0.0000000 ]
+  distance:    0.2034999
+  band:
+  - # 1
+    frequency:   -3.6653562217
+  - # 2
+    frequency:   15.9391925358
+  - # 3
+    frequency:   17.2079726163
+  - # 4
+    frequency:   37.1221077470
+  - # 5
+    frequency:   47.1415851884
+  - # 6
+    frequency:   47.8095846099
+
+- q-position: [    0.4250000,    0.0000000,    0.0000000 ]
+  distance:    0.2059226
+  band:
+  - # 1
+    frequency:   -3.5721677256
+  - # 2
+    frequency:   15.9751508286
+  - # 3
+    frequency:   17.1161933540
+  - # 4
+    frequency:   37.3953026585
+  - # 5
+    frequency:   47.1214602392
+  - # 6
+    frequency:   47.6413817245
+
+- q-position: [    0.4300000,    0.0000000,    0.0000000 ]
+  distance:    0.2083452
+  band:
+  - # 1
+    frequency:   -3.4783593289
+  - # 2
+    frequency:   16.0083549388
+  - # 3
+    frequency:   17.0283963379
+  - # 4
+    frequency:   37.6597711222
+  - # 5
+    frequency:   47.1025421105
+  - # 6
+    frequency:   47.4755541350
+
+- q-position: [    0.4350000,    0.0000000,    0.0000000 ]
+  distance:    0.2107678
+  band:
+  - # 1
+    frequency:   -3.3845852003
+  - # 2
+    frequency:   16.0388823614
+  - # 3
+    frequency:   16.9449004423
+  - # 4
+    frequency:   37.9147810613
+  - # 5
+    frequency:   47.0848474357
+  - # 6
+    frequency:   47.3127644061
+
+- q-position: [    0.4400000,    0.0000000,    0.0000000 ]
+  distance:    0.2131904
+  band:
+  - # 1
+    frequency:   -3.2915812835
+  - # 2
+    frequency:   16.0668082672
+  - # 3
+    frequency:   16.8660224667
+  - # 4
+    frequency:   38.1594892681
+  - # 5
+    frequency:   47.0683922355
+  - # 6
+    frequency:   47.1537859447
+
+- q-position: [    0.4450000,    0.0000000,    0.0000000 ]
+  distance:    0.2156130
+  band:
+  - # 1
+    frequency:   -3.2001686663
+  - # 2
+    frequency:   16.0922049548
+  - # 3
+    frequency:   16.7920745148
+  - # 4
+    frequency:   38.3929274026
+  - # 5
+    frequency:   46.9995180435
+  - # 6
+    frequency:   47.0531918247
+
+- q-position: [    0.4500000,    0.0000000,    0.0000000 ]
+  distance:    0.2180356
+  band:
+  - # 1
+    frequency:   -3.1112544334
+  - # 2
+    frequency:   16.1151413102
+  - # 3
+    frequency:   16.7233611206
+  - # 4
+    frequency:   38.6139888912
+  - # 5
+    frequency:   46.8509999662
+  - # 6
+    frequency:   47.0392607194
+
+- q-position: [    0.4550000,    0.0000000,    0.0000000 ]
+  distance:    0.2204583
+  band:
+  - # 1
+    frequency:   -3.0258287590
+  - # 2
+    frequency:   16.1356822788
+  - # 3
+    frequency:   16.6601761544
+  - # 4
+    frequency:   38.8214186817
+  - # 5
+    frequency:   46.7094221143
+  - # 6
+    frequency:   47.0266125436
+
+- q-position: [    0.4600000,    0.0000000,    0.0000000 ]
+  distance:    0.2228809
+  band:
+  - # 1
+    frequency:   -2.9449567327
+  - # 2
+    frequency:   16.1538883568
+  - # 3
+    frequency:   16.6027995554
+  - # 4
+    frequency:   39.0138088000
+  - # 5
+    frequency:   46.5761313233
+  - # 6
+    frequency:   47.0152599393
+
+- q-position: [    0.4650000,    0.0000000,    0.0000000 ]
+  distance:    0.2253035
+  band:
+  - # 1
+    frequency:   -2.8697632456
+  - # 2
+    frequency:   16.1698151083
+  - # 3
+    frequency:   16.5514939570
+  - # 4
+    frequency:   39.1896038006
+  - # 5
+    frequency:   46.4526261937
+  - # 6
+    frequency:   47.0052144792
+
+- q-position: [    0.4700000,    0.0000000,    0.0000000 ]
+  distance:    0.2277261
+  band:
+  - # 1
+    frequency:   -2.8014093357
+  - # 2
+    frequency:   16.1835127135
+  - # 3
+    frequency:   16.5065012783
+  - # 4
+    frequency:   39.3471212522
+  - # 5
+    frequency:   46.3405373116
+  - # 6
+    frequency:   46.9964865855
+
+- q-position: [    0.4750000,    0.0000000,    0.0000000 ]
+  distance:    0.2301487
+  band:
+  - # 1
+    frequency:   -2.7410588459
+  - # 2
+    frequency:   16.1950255552
+  - # 3
+    frequency:   16.4680393743
+  - # 4
+    frequency:   39.4845928469
+  - # 5
+    frequency:   46.2415867675
+  - # 6
+    frequency:   46.9890854541
+
+- q-position: [    0.4800000,    0.0000000,    0.0000000 ]
+  distance:    0.2325714
+  band:
+  - # 1
+    frequency:   -2.6898352593
+  - # 2
+    frequency:   16.2043918479
+  - # 3
+    frequency:   16.4362988422
+  - # 4
+    frequency:   39.6002307883
+  - # 5
+    frequency:   46.1575223152
+  - # 6
+    frequency:   46.9830189875
+
+- q-position: [    0.4850000,    0.0000000,    0.0000000 ]
+  distance:    0.2349940
+  band:
+  - # 1
+    frequency:   -2.6487701993
+  - # 2
+    frequency:   16.2116433146
+  - # 3
+    frequency:   16.4114400868
+  - # 4
+    frequency:   39.6923209203
+  - # 5
+    frequency:   46.0900247103
+  - # 6
+    frequency:   46.9782937351
+
+- q-position: [    0.4900000,    0.0000000,    0.0000000 ]
+  distance:    0.2374166
+  band:
+  - # 1
+    frequency:   -2.6187471766
+  - # 2
+    frequency:   16.2168049170
+  - # 3
+    frequency:   16.3935907480
+  - # 4
+    frequency:   39.7593381138
+  - # 5
+    frequency:   46.0405927048
+  - # 6
+    frequency:   46.9749148440
+
+- q-position: [    0.4950000,    0.0000000,    0.0000000 ]
+  distance:    0.2398392
+  band:
+  - # 1
+    frequency:   -2.6004462883
+  - # 2
+    frequency:   16.2198946404
+  - # 3
+    frequency:   16.3828435862
+  - # 4
+    frequency:   39.8000714693
+  - # 5
+    frequency:   46.0104181438
+  - # 6
+    frequency:   46.9728860192
+
+- q-position: [    0.5000000,    0.0000000,    0.0000000 ]
+  distance:    0.2422618
+  band:
+  - # 1
+    frequency:   -2.5942970155
+  - # 2
+    frequency:   16.2209233387
+  - # 3
+    frequency:   16.3792549063
+  - # 4
+    frequency:   39.8137393996
+  - # 5
+    frequency:   46.0002710962
+  - # 6
+    frequency:   46.9722094953
+
+- q-position: [    0.5000000,    0.0000000,    0.0000000 ]
+  distance:    0.2422618
+  band:
+  - # 1
+    frequency:   -2.5942970155
+  - # 2
+    frequency:   16.2209233387
+  - # 3
+    frequency:   16.3792549063
+  - # 4
+    frequency:   39.8137393996
+  - # 5
+    frequency:   46.0002710962
+  - # 6
+    frequency:   46.9722094953
+
+- q-position: [    0.4983333,    0.0033333,    0.0000000 ]
+  distance:    0.2436605
+  band:
+  - # 1
+    frequency:   -2.5945964039
+  - # 2
+    frequency:   16.2239962460
+  - # 3
+    frequency:   16.3791918777
+  - # 4
+    frequency:   39.8130635185
+  - # 5
+    frequency:   45.9989800616
+  - # 6
+    frequency:   46.9731421753
+
+- q-position: [    0.4966667,    0.0066667,    0.0000000 ]
+  distance:    0.2450592
+  band:
+  - # 1
+    frequency:   -2.5954939410
+  - # 2
+    frequency:   16.2332101298
+  - # 3
+    frequency:   16.3790027268
+  - # 4
+    frequency:   39.8110364379
+  - # 5
+    frequency:   45.9951190206
+  - # 6
+    frequency:   46.9759278360
+
+- q-position: [    0.4950000,    0.0100000,    0.0000000 ]
+  distance:    0.2464579
+  band:
+  - # 1
+    frequency:   -2.5969877449
+  - # 2
+    frequency:   16.2485505006
+  - # 3
+    frequency:   16.3786872589
+  - # 4
+    frequency:   39.8076598443
+  - # 5
+    frequency:   45.9887233578
+  - # 6
+    frequency:   46.9805301445
+
+- q-position: [    0.4933333,    0.0133333,    0.0000000 ]
+  distance:    0.2478566
+  band:
+  - # 1
+    frequency:   -2.5990746879
+  - # 2
+    frequency:   16.2699932947
+  - # 3
+    frequency:   16.3782451503
+  - # 4
+    frequency:   39.8029365448
+  - # 5
+    frequency:   45.9798494883
+  - # 6
+    frequency:   46.9868911133
+
+- q-position: [    0.4916667,    0.0166667,    0.0000000 ]
+  distance:    0.2492553
+  band:
+  - # 1
+    frequency:   -2.6017504083
+  - # 2
+    frequency:   16.2975050002
+  - # 3
+    frequency:   16.3776759498
+  - # 4
+    frequency:   39.7968704600
+  - # 5
+    frequency:   45.9685714012
+  - # 6
+    frequency:   46.9949345664
+
+- q-position: [    0.4900000,    0.0200000,    0.0000000 ]
+  distance:    0.2506540
+  band:
+  - # 1
+    frequency:   -2.6050093278
+  - # 2
+    frequency:   16.3310428317
+  - # 3
+    frequency:   16.3769790805
+  - # 4
+    frequency:   39.7894666162
+  - # 5
+    frequency:   45.9549764915
+  - # 6
+    frequency:   47.0045703238
+
+- q-position: [    0.4883333,    0.0233333,    0.0000000 ]
+  distance:    0.2520527
+  band:
+  - # 1
+    frequency:   -2.6088446737
+  - # 2
+    frequency:   16.3705549501
+  - # 3
+    frequency:   16.3761538420
+  - # 4
+    frequency:   39.7807311343
+  - # 5
+    frequency:   45.9391611609
+  - # 6
+    frequency:   47.0156986193
+
+- q-position: [    0.4866667,    0.0266667,    0.0000000 ]
+  distance:    0.2534514
+  band:
+  - # 1
+    frequency:   -2.6132485048
+  - # 2
+    frequency:   16.3751994139
+  - # 3
+    frequency:   16.4159807258
+  - # 4
+    frequency:   39.7706712167
+  - # 5
+    frequency:   45.9212266109
+  - # 6
+    frequency:   47.0282143303
+
+- q-position: [    0.4850000,    0.0300000,    0.0000000 ]
+  distance:    0.2548501
+  band:
+  - # 1
+    frequency:   -2.6182117416
+  - # 2
+    frequency:   16.3741148587
+  - # 3
+    frequency:   16.4672510401
+  - # 4
+    frequency:   39.7592951329
+  - # 5
+    frequency:   45.9012751402
+  - # 6
+    frequency:   47.0420107077
+
+- q-position: [    0.4833333,    0.0333333,    0.0000000 ]
+  distance:    0.2562488
+  band:
+  - # 1
+    frequency:   -2.6237242012
+  - # 2
+    frequency:   16.3728991259
+  - # 3
+    frequency:   16.5242886226
+  - # 4
+    frequency:   39.7466122032
+  - # 5
+    frequency:   45.8794071227
+  - # 6
+    frequency:   47.0569824282
+
+- q-position: [    0.4816667,    0.0366667,    0.0000000 ]
+  distance:    0.2576475
+  band:
+  - # 1
+    frequency:   -2.6297746345
+  - # 2
+    frequency:   16.3715510571
+  - # 3
+    frequency:   16.5870084187
+  - # 4
+    frequency:   39.7326327807
+  - # 5
+    frequency:   45.8557187263
+  - # 6
+    frequency:   47.0730279090
+
+- q-position: [    0.4800000,    0.0400000,    0.0000000 ]
+  distance:    0.2590462
+  band:
+  - # 1
+    frequency:   -2.6363507678
+  - # 2
+    frequency:   16.3700693901
+  - # 3
+    frequency:   16.6553179839
+  - # 4
+    frequency:   39.7173682329
+  - # 5
+    frequency:   45.8303003406
+  - # 6
+    frequency:   47.0900509166
+
+- q-position: [    0.4783333,    0.0433333,    0.0000000 ]
+  distance:    0.2604449
+  band:
+  - # 1
+    frequency:   -2.6434393463
+  - # 2
+    frequency:   16.3684527653
+  - # 3
+    frequency:   16.7291178999
+  - # 4
+    frequency:   39.7008309217
+  - # 5
+    frequency:   45.8032356268
+  - # 6
+    frequency:   47.1079615566
+
+- q-position: [    0.4766667,    0.0466667,    0.0000000 ]
+  distance:    0.2618436
+  band:
+  - # 1
+    frequency:   -2.6510261805
+  - # 2
+    frequency:   16.3666997311
+  - # 3
+    frequency:   16.8083022069
+  - # 4
+    frequency:   39.6830341839
+  - # 5
+    frequency:   45.7746010739
+  - # 6
+    frequency:   47.1266767585
+
+- q-position: [    0.4750000,    0.0500000,    0.0000000 ]
+  distance:    0.2632423
+  band:
+  - # 1
+    frequency:   -2.6590961951
+  - # 2
+    frequency:   16.3648087510
+  - # 3
+    frequency:   16.8927588487
+  - # 4
+    frequency:   39.6639923105
+  - # 5
+    frequency:   45.7444659440
+  - # 6
+    frequency:   47.1461203747
+
+- q-position: [    0.4733333,    0.0533333,    0.0000000 ]
+  distance:    0.2646410
+  band:
+  - # 1
+    frequency:   -2.6676334787
+  - # 2
+    frequency:   16.3627782102
+  - # 3
+    frequency:   16.9823701246
+  - # 4
+    frequency:   39.6437205269
+  - # 5
+    frequency:   45.7128924978
+  - # 6
+    frequency:   47.1662230002
+
+- q-position: [    0.4716667,    0.0566667,    0.0000000 ]
+  distance:    0.2660397
+  band:
+  - # 1
+    frequency:   -2.6766213361
+  - # 2
+    frequency:   16.3606064234
+  - # 3
+    frequency:   17.0770131454
+  - # 4
+    frequency:   39.6222349734
+  - # 5
+    frequency:   45.6799364078
+  - # 6
+    frequency:   47.1869216066
+
+- q-position: [    0.4700000,    0.0600000,    0.0000000 ]
+  distance:    0.2674384
+  band:
+  - # 1
+    frequency:   -2.6860423402
+  - # 2
+    frequency:   16.3582916427
+  - # 3
+    frequency:   17.1765602872
+  - # 4
+    frequency:   39.5995526862
+  - # 5
+    frequency:   45.6456472861
+  - # 6
+    frequency:   47.2081590622
+
+- q-position: [    0.4683333,    0.0633333,    0.0000000 ]
+  distance:    0.2688371
+  band:
+  - # 1
+    frequency:   -2.6958783862
+  - # 2
+    frequency:   16.3558320663
+  - # 3
+    frequency:   17.2808796408
+  - # 4
+    frequency:   39.5756915801
+  - # 5
+    frequency:   45.6100692701
+  - # 6
+    frequency:   47.2298835954
+
+- q-position: [    0.4666667,    0.0666667,    0.0000000 ]
+  distance:    0.2702358
+  band:
+  - # 1
+    frequency:   -2.7061107444
+  - # 2
+    frequency:   16.3532258469
+  - # 3
+    frequency:   17.3898354526
+  - # 4
+    frequency:   39.5506704317
+  - # 5
+    frequency:   45.5732416277
+  - # 6
+    frequency:   47.2520482392
+
+- q-position: [    0.4650000,    0.0700000,    0.0000000 ]
+  distance:    0.2716345
+  band:
+  - # 1
+    frequency:   -2.7167201146
+  - # 2
+    frequency:   16.3504711018
+  - # 3
+    frequency:   17.5032885529
+  - # 4
+    frequency:   39.5245088655
+  - # 5
+    frequency:   45.5351993526
+  - # 6
+    frequency:   47.2746102857
+
+- q-position: [    0.4633333,    0.0733333,    0.0000000 ]
+  distance:    0.2730332
+  band:
+  - # 1
+    frequency:   -2.7276866796
+  - # 2
+    frequency:   16.3475659223
+  - # 3
+    frequency:   17.6210967710
+  - # 4
+    frequency:   39.4972273410
+  - # 5
+    frequency:   45.4959737322
+  - # 6
+    frequency:   47.2975307680
+
+- q-position: [    0.4616667,    0.0766667,    0.0000000 ]
+  distance:    0.2744319
+  band:
+  - # 1
+    frequency:   -2.7389901577
+  - # 2
+    frequency:   16.3445083840
+  - # 3
+    frequency:   17.7431153318
+  - # 4
+    frequency:   39.4688471425
+  - # 5
+    frequency:   45.4555928780
+  - # 6
+    frequency:   47.3207739803
+
+- q-position: [    0.4600000,    0.0800000,    0.0000000 ]
+  distance:    0.2758306
+  band:
+  - # 1
+    frequency:   -2.7506098556
+  - # 2
+    frequency:   16.3412965577
+  - # 3
+    frequency:   17.8691972340
+  - # 4
+    frequency:   39.4393903717
+  - # 5
+    frequency:   45.4140822114
+  - # 6
+    frequency:   47.3443070403
+
+- q-position: [    0.4583333,    0.0833333,    0.0000000 ]
+  distance:    0.2772293
+  band:
+  - # 1
+    frequency:   -2.7625247197
+  - # 2
+    frequency:   16.3379285202
+  - # 3
+    frequency:   17.9991936080
+  - # 4
+    frequency:   39.4088799418
+  - # 5
+    frequency:   45.3714649052
+  - # 6
+    frequency:   47.3680994977
+
+- q-position: [    0.4566667,    0.0866667,    0.0000000 ]
+  distance:    0.2786280
+  band:
+  - # 1
+    frequency:   -2.7747133863
+  - # 2
+    frequency:   16.3344023663
+  - # 3
+    frequency:   18.1329540505
+  - # 4
+    frequency:   39.3773395764
+  - # 5
+    frequency:   45.3277622790
+  - # 6
+    frequency:   47.3921229867
+
+- q-position: [    0.4550000,    0.0900000,    0.0000000 ]
+  distance:    0.2800267
+  band:
+  - # 1
+    frequency:   -2.7871542310
+  - # 2
+    frequency:   16.3307162200
+  - # 3
+    frequency:   18.2703269372
+  - # 4
+    frequency:   39.3447938099
+  - # 5
+    frequency:   45.2829941514
+  - # 6
+    frequency:   47.4163509208
+
+- q-position: [    0.4533333,    0.0933333,    0.0000000 ]
+  distance:    0.2814254
+  band:
+  - # 1
+    frequency:   -2.7998254164
+  - # 2
+    frequency:   16.3268682475
+  - # 3
+    frequency:   18.4111597112
+  - # 4
+    frequency:   39.3112679922
+  - # 5
+    frequency:   45.2371791521
+  - # 6
+    frequency:   47.4407582270
+
+- q-position: [    0.4516667,    0.0966667,    0.0000000 ]
+  distance:    0.2828241
+  band:
+  - # 1
+    frequency:   -2.8127049387
+  - # 2
+    frequency:   16.3228566693
+  - # 3
+    frequency:   18.5552991476
+  - # 4
+    frequency:   39.2767882964
+  - # 5
+    frequency:   45.1903349969
+  - # 6
+    frequency:   47.4653211164
+
+- q-position: [    0.4500000,    0.1000000,    0.0000000 ]
+  distance:    0.2842228
+  band:
+  - # 1
+    frequency:   -2.8257706727
+  - # 2
+    frequency:   16.3186797736
+  - # 3
+    frequency:   18.7025915932
+  - # 4
+    frequency:   39.2413817302
+  - # 5
+    frequency:   45.1424787290
+  - # 6
+    frequency:   47.4900168868
+
+- q-position: [    0.4483333,    0.1033333,    0.0000000 ]
+  distance:    0.2856215
+  band:
+  - # 1
+    frequency:   -2.8390004149
+  - # 2
+    frequency:   16.3143359293
+  - # 3
+    frequency:   18.8528831828
+  - # 4
+    frequency:   39.2050761511
+  - # 5
+    frequency:   45.0936269299
+  - # 6
+    frequency:   47.5148237545
+
+- q-position: [    0.4466667,    0.1066667,    0.0000000 ]
+  distance:    0.2870202
+  band:
+  - # 1
+    frequency:   -2.8523719263
+  - # 2
+    frequency:   16.3098235998
+  - # 3
+    frequency:   19.0060200316
+  - # 4
+    frequency:   39.1679002854
+  - # 5
+    frequency:   45.0437959038
+  - # 6
+    frequency:   47.5397207123
+
+- q-position: [    0.4450000,    0.1100000,    0.0000000 ]
+  distance:    0.2884189
+  band:
+  - # 1
+    frequency:   -2.8658629719
+  - # 2
+    frequency:   16.3051413569
+  - # 3
+    frequency:   19.1618484032
+  - # 4
+    frequency:   39.1298837511
+  - # 5
+    frequency:   44.9930018377
+  - # 6
+    frequency:   47.5646874090
+
+- q-position: [    0.4433333,    0.1133333,    0.0000000 ]
+  distance:    0.2898176
+  band:
+  - # 1
+    frequency:   -2.8794513606
+  - # 2
+    frequency:   16.3002878952
+  - # 3
+    frequency:   19.3202148557
+  - # 4
+    frequency:   39.0910570845
+  - # 5
+    frequency:   44.9412609411
+  - # 6
+    frequency:   47.5897040498
+
+- q-position: [    0.4416667,    0.1166667,    0.0000000 ]
+  distance:    0.2912163
+  band:
+  - # 1
+    frequency:   -2.8931149820
+  - # 2
+    frequency:   16.2952620465
+  - # 3
+    frequency:   19.4809663654
+  - # 4
+    frequency:   39.0514517713
+  - # 5
+    frequency:   44.8885895669
+  - # 6
+    frequency:   47.6147513133
+
+- q-position: [    0.4400000,    0.1200000,    0.0000000 ]
+  distance:    0.2926150
+  band:
+  - # 1
+    frequency:   -2.9068318433
+  - # 2
+    frequency:   16.2900627944
+  - # 3
+    frequency:   19.6439504281
+  - # 4
+    frequency:   39.0111002815
+  - # 5
+    frequency:   44.8350043167
+  - # 6
+    frequency:   47.6398102836
+
+- q-position: [    0.4383333,    0.1233333,    0.0000000 ]
+  distance:    0.2940137
+  band:
+  - # 1
+    frequency:   -2.9205801034
+  - # 2
+    frequency:   16.2846892900
+  - # 3
+    frequency:   19.8090151408
+  - # 4
+    frequency:   38.9700361082
+  - # 5
+    frequency:   44.7805221314
+  - # 6
+    frequency:   47.6648623954
+
+- q-position: [    0.4366667,    0.1266667,    0.0000000 ]
+  distance:    0.2954124
+  band:
+  - # 1
+    frequency:   -2.9343381070
+  - # 2
+    frequency:   16.2791408662
+  - # 3
+    frequency:   19.9760092628
+  - # 4
+    frequency:   38.9282938105
+  - # 5
+    frequency:   44.7251603713
+  - # 6
+    frequency:   47.6898893898
+
+- q-position: [    0.4350000,    0.1300000,    0.0000000 ]
+  distance:    0.2968111
+  band:
+  - # 1
+    frequency:   -2.9480844172
+  - # 2
+    frequency:   16.2734170542
+  - # 3
+    frequency:   20.1447822579
+  - # 4
+    frequency:   38.8859090609
+  - # 5
+    frequency:   44.6689368844
+  - # 6
+    frequency:   47.7148732804
+
+- q-position: [    0.4333333,    0.1333333,    0.0000000 ]
+  distance:    0.2982098
+  band:
+  - # 1
+    frequency:   -2.9617978462
+  - # 2
+    frequency:   16.2675175983
+  - # 3
+    frequency:   20.3151843181
+  - # 4
+    frequency:   38.8429186960
+  - # 5
+    frequency:   44.6118700668
+  - # 6
+    frequency:   47.7397963268
+
+- q-position: [    0.4316667,    0.1366667,    0.0000000 ]
+  distance:    0.2996085
+  band:
+  - # 1
+    frequency:   -2.9754574864
+  - # 2
+    frequency:   16.2614424723
+  - # 3
+    frequency:   20.4870663704
+  - # 4
+    frequency:   38.7993607713
+  - # 5
+    frequency:   44.5539789155
+  - # 6
+    frequency:   47.7646410154
+
+- q-position: [    0.4300000,    0.1400000,    0.0000000 ]
+  distance:    0.3010072
+  band:
+  - # 1
+    frequency:   -2.9890427398
+  - # 2
+    frequency:   16.2551918953
+  - # 3
+    frequency:   20.6602800666
+  - # 4
+    frequency:   38.7552746202
+  - # 5
+    frequency:   44.4952830753
+  - # 6
+    frequency:   47.7893900462
+
+- q-position: [    0.4283333,    0.1433333,    0.0000000 ]
+  distance:    0.3024059
+  band:
+  - # 1
+    frequency:   -3.0025333467
+  - # 2
+    frequency:   16.2487663479
+  - # 3
+    frequency:   20.8346777573
+  - # 4
+    frequency:   38.7107009162
+  - # 5
+    frequency:   44.4358028805
+  - # 6
+    frequency:   47.8140263241
+
+- q-position: [    0.4266667,    0.1466667,    0.0000000 ]
+  distance:    0.3038046
+  band:
+  - # 1
+    frequency:   -3.0159094139
+  - # 2
+    frequency:   16.2421665883
+  - # 3
+    frequency:   21.0101124513
+  - # 4
+    frequency:   38.6656817383
+  - # 5
+    frequency:   44.3755593921
+  - # 6
+    frequency:   47.8385329550
+
+- q-position: [    0.4250000,    0.1500000,    0.0000000 ]
+  distance:    0.3052033
+  band:
+  - # 1
+    frequency:   -3.0291514425
+  - # 2
+    frequency:   16.2353936689
+  - # 3
+    frequency:   21.1864377602
+  - # 4
+    frequency:   38.6202606408
+  - # 5
+    frequency:   44.3145744335
+  - # 6
+    frequency:   47.8628932449
+
+- q-position: [    0.4233333,    0.1533333,    0.0000000 ]
+  distance:    0.3066020
+  band:
+  - # 1
+    frequency:   -3.0422403551
+  - # 2
+    frequency:   16.2284489524
+  - # 3
+    frequency:   21.3635078302
+  - # 4
+    frequency:   38.5744827244
+  - # 5
+    frequency:   44.2528706220
+  - # 6
+    frequency:   47.8870907023
+
+- q-position: [    0.4216667,    0.1566667,    0.0000000 ]
+  distance:    0.3080007
+  band:
+  - # 1
+    frequency:   -3.0551575226
+  - # 2
+    frequency:   16.2213341286
+  - # 3
+    frequency:   21.5411772605
+  - # 4
+    frequency:   38.5283947117
+  - # 5
+    frequency:   44.1904714005
+  - # 6
+    frequency:   47.9111090427
+
+- q-position: [    0.4200000,    0.1600000,    0.0000000 ]
+  distance:    0.3093994
+  band:
+  - # 1
+    frequency:   -3.0678847911
+  - # 2
+    frequency:   16.2140512307
+  - # 3
+    frequency:   21.7193010105
+  - # 4
+    frequency:   38.4820450229
+  - # 5
+    frequency:   44.1274010680
+  - # 6
+    frequency:   47.9349321951
+
+- q-position: [    0.4183333,    0.1633333,    0.0000000 ]
+  distance:    0.3107981
+  band:
+  - # 1
+    frequency:   -3.0804045084
+  - # 2
+    frequency:   16.2066026517
+  - # 3
+    frequency:   21.8977342951
+  - # 4
+    frequency:   38.4354838551
+  - # 5
+    frequency:   44.0636848100
+  - # 6
+    frequency:   47.9585443100
+
+- q-position: [    0.4166667,    0.1666667,    0.0000000 ]
+  distance:    0.3121968
+  band:
+  - # 1
+    frequency:   -3.0926995506
+  - # 2
+    frequency:   16.1989911610
+  - # 3
+    frequency:   22.0763324703
+  - # 4
+    frequency:   38.3887632609
+  - # 5
+    frequency:   43.9993487306
+  - # 6
+    frequency:   47.9819297694
+
+- q-position: [    0.4150000,    0.1700000,    0.0000000 ]
+  distance:    0.3135955
+  band:
+  - # 1
+    frequency:   -3.1047533491
+  - # 2
+    frequency:   16.1912199209
+  - # 3
+    frequency:   22.2549509085
+  - # 4
+    frequency:   38.3419372283
+  - # 5
+    frequency:   43.9344198848
+  - # 6
+    frequency:   48.0050731964
+
+- q-position: [    0.4133333,    0.1733333,    0.0000000 ]
+  distance:    0.3149942
+  band:
+  - # 1
+    frequency:   -3.1165499171
+  - # 2
+    frequency:   16.1832925025
+  - # 3
+    frequency:   22.4334448663
+  - # 4
+    frequency:   38.2950617592
+  - # 5
+    frequency:   43.8689263147
+  - # 6
+    frequency:   48.0279594668
+
+- q-position: [    0.4116667,    0.1766667,    0.0000000 ]
+  distance:    0.3163929
+  band:
+  - # 1
+    frequency:   -3.1280738771
+  - # 2
+    frequency:   16.1752129026
+  - # 3
+    frequency:   22.6116693436
+  - # 4
+    frequency:   38.2481949465
+  - # 5
+    frequency:   43.8028970871
+  - # 6
+    frequency:   48.0505737206
+
+- q-position: [    0.4100000,    0.1800000,    0.0000000 ]
+  distance:    0.3177916
+  band:
+  - # 1
+    frequency:   -3.1393104883
+  - # 2
+    frequency:   16.1669855590
+  - # 3
+    frequency:   22.7894789369
+  - # 4
+    frequency:   38.2013970476
+  - # 5
+    frequency:   43.7363623360
+  - # 6
+    frequency:   48.0729013738
+
+- q-position: [    0.4083333,    0.1833333,    0.0000000 ]
+  distance:    0.3191903
+  band:
+  - # 1
+    frequency:   -3.1502456748
+  - # 2
+    frequency:   16.1586153669
+  - # 3
+    frequency:   22.9667276876
+  - # 4
+    frequency:   38.1547305536
+  - # 5
+    frequency:   43.6693533092
+  - # 6
+    frequency:   48.0949281310
+
+- q-position: [    0.4066667,    0.1866667,    0.0000000 ]
+  distance:    0.3205890
+  band:
+  - # 1
+    frequency:   -3.1608660540
+  - # 2
+    frequency:   16.1501076943
+  - # 3
+    frequency:   23.1432689265
+  - # 4
+    frequency:   38.1082602509
+  - # 5
+    frequency:   43.6019024197
+  - # 6
+    frequency:   48.1166399974
+
+- q-position: [    0.4050000,    0.1900000,    0.0000000 ]
+  distance:    0.3219877
+  band:
+  - # 1
+    frequency:   -3.1711589656
+  - # 2
+    frequency:   16.1414683977
+  - # 3
+    frequency:   23.3189551160
+  - # 4
+    frequency:   38.0620532753
+  - # 5
+    frequency:   43.5340433039
+  - # 6
+    frequency:   48.1380232911
+
+- q-position: [    0.4033333,    0.1933333,    0.0000000 ]
+  distance:    0.3233864
+  band:
+  - # 1
+    frequency:   -3.1811125015
+  - # 2
+    frequency:   16.1327038369
+  - # 3
+    frequency:   23.4936376930
+  - # 4
+    frequency:   38.0161791535
+  - # 5
+    frequency:   43.4658108866
+  - # 6
+    frequency:   48.1590646554
+
+- q-position: [    0.4016667,    0.1966667,    0.0000000 ]
+  distance:    0.3247851
+  band:
+  - # 1
+    frequency:   -3.1907155362
+  - # 2
+    frequency:   16.1238208901
+  - # 3
+    frequency:   23.6671669140
+  - # 4
+    frequency:   37.9707098308
+  - # 5
+    frequency:   43.3972414539
+  - # 6
+    frequency:   48.1797510707
+
+- q-position: [    0.4000000,    0.2000000,    0.0000000 ]
+  distance:    0.3261838
+  band:
+  - # 1
+    frequency:   -3.1999577579
+  - # 2
+    frequency:   16.1148269682
+  - # 3
+    frequency:   23.8393917050
+  - # 4
+    frequency:   37.9257196810
+  - # 5
+    frequency:   43.3283727351
+  - # 6
+    frequency:   48.2000698663
+
+- q-position: [    0.3983333,    0.2033333,    0.0000000 ]
+  distance:    0.3275825
+  band:
+  - # 1
+    frequency:   -3.2088297004
+  - # 2
+    frequency:   16.1057300286
+  - # 3
+    frequency:   24.0101595195
+  - # 4
+    frequency:   37.8812854943
+  - # 5
+    frequency:   43.2592439953
+  - # 6
+    frequency:   48.2200087317
+
+- q-position: [    0.3966667,    0.2066667,    0.0000000 ]
+  distance:    0.3289812
+  band:
+  - # 1
+    frequency:   -3.2173227761
+  - # 2
+    frequency:   16.0965385893
+  - # 3
+    frequency:   24.1793162082
+  - # 4
+    frequency:   37.8374864389
+  - # 5
+    frequency:   43.1898961388
+  - # 6
+    frequency:   48.2395557283
+
+- q-position: [    0.3950000,    0.2100000,    0.0000000 ]
+  distance:    0.3303799
+  band:
+  - # 1
+    frequency:   -3.2254293091
+  - # 2
+    frequency:   16.0872617416
+  - # 3
+    frequency:   24.3467059044
+  - # 4
+    frequency:   37.7944039912
+  - # 5
+    frequency:   43.1203718260
+  - # 6
+    frequency:   48.2586992992
+
+- q-position: [    0.3933333,    0.2133333,    0.0000000 ]
+  distance:    0.3317786
+  band:
+  - # 1
+    frequency:   -3.2331425695
+  - # 2
+    frequency:   16.0779091624
+  - # 3
+    frequency:   24.5121709284
+  - # 4
+    frequency:   37.7521218290
+  - # 5
+    frequency:   43.0507156037
+  - # 6
+    frequency:   48.2774282806
+
+- q-position: [    0.3916667,    0.2166667,    0.0000000 ]
+  distance:    0.3331773
+  band:
+  - # 1
+    frequency:   -3.2404568088
+  - # 2
+    frequency:   16.0684911265
+  - # 3
+    frequency:   24.6755517182
+  - # 4
+    frequency:   37.7107256807
+  - # 5
+    frequency:   42.9809740527
+  - # 6
+    frequency:   48.2957319109
+
+- q-position: [    0.3900000,    0.2200000,    0.0000000 ]
+  distance:    0.3345760
+  band:
+  - # 1
+    frequency:   -3.2473672956
+  - # 2
+    frequency:   16.0590185176
+  - # 3
+    frequency:   24.8366867896
+  - # 4
+    frequency:   37.6703031238
+  - # 5
+    frequency:   42.9111959515
+  - # 6
+    frequency:   48.3135998408
+
+- q-position: [    0.3883333,    0.2233333,    0.0000000 ]
+  distance:    0.3359747
+  band:
+  - # 1
+    frequency:   -3.2538703518
+  - # 2
+    frequency:   16.0495028386
+  - # 3
+    frequency:   24.9954127336
+  - # 4
+    frequency:   37.6309433243
+  - # 5
+    frequency:   42.8414324611
+  - # 6
+    frequency:   48.3310221422
+
+- q-position: [    0.3866667,    0.2266667,    0.0000000 ]
+  distance:    0.3373734
+  band:
+  - # 1
+    frequency:   -3.2599633903
+  - # 2
+    frequency:   16.0399562215
+  - # 3
+    frequency:   25.1515642566
+  - # 4
+    frequency:   37.5927367097
+  - # 5
+    frequency:   42.7717373307
+  - # 6
+    frequency:   48.3479893168
+
+- q-position: [    0.3850000,    0.2300000,    0.0000000 ]
+  distance:    0.3387721
+  band:
+  - # 1
+    frequency:   -3.2656449521
+  - # 2
+    frequency:   16.0303914361
+  - # 3
+    frequency:   25.3049742709
+  - # 4
+    frequency:   37.5557745644
+  - # 5
+    frequency:   42.7021671275
+  - # 6
+    frequency:   48.3644923042
+
+- q-position: [    0.3833333,    0.2333333,    0.0000000 ]
+  distance:    0.3401708
+  band:
+  - # 1
+    frequency:   -3.2709147454
+  - # 2
+    frequency:   16.0208218978
+  - # 3
+    frequency:   25.4554740428
+  - # 4
+    frequency:   37.5201485398
+  - # 5
+    frequency:   42.6327814929
+  - # 6
+    frequency:   48.3805224899
+
+- q-position: [    0.3816667,    0.2366667,    0.0000000 ]
+  distance:    0.3415695
+  band:
+  - # 1
+    frequency:   -3.2757736830
+  - # 2
+    frequency:   16.0112616744
+  - # 3
+    frequency:   25.6028934058
+  - # 4
+    frequency:   37.4859500686
+  - # 5
+    frequency:   42.5636434280
+  - # 6
+    frequency:   48.3960717121
+
+- q-position: [    0.3800000,    0.2400000,    0.0000000 ]
+  distance:    0.3429682
+  band:
+  - # 1
+    frequency:   -3.2802239221
+  - # 2
+    frequency:   16.0017254920
+  - # 3
+    frequency:   25.7470610465
+  - # 4
+    frequency:   37.4532696722
+  - # 5
+    frequency:   42.4948196102
+  - # 6
+    frequency:   48.4111322691
+
+- q-position: [    0.3783333,    0.2433333,    0.0000000 ]
+  distance:    0.3443669
+  band:
+  - # 1
+    frequency:   -3.2842689023
+  - # 2
+    frequency:   15.9922287393
+  - # 3
+    frequency:   25.8878048700
+  - # 4
+    frequency:   37.4221961535
+  - # 5
+    frequency:   42.4263807443
+  - # 6
+    frequency:   48.4256969251
+
+- q-position: [    0.3766667,    0.2466667,    0.0000000 ]
+  distance:    0.3457656
+  band:
+  - # 1
+    frequency:   -3.2879133848
+  - # 2
+    frequency:   15.9827874714
+  - # 3
+    frequency:   26.0249524520
+  - # 4
+    frequency:   37.3928156631
+  - # 5
+    frequency:   42.3584019508
+  - # 6
+    frequency:   48.4397589166
+
+- q-position: [    0.3750000,    0.2500000,    0.0000000 ]
+  distance:    0.3471643
+  band:
+  - # 1
+    frequency:   -3.2911634899
+  - # 2
+    frequency:   15.9734184112
+  - # 3
+    frequency:   26.1583315833
+  - # 4
+    frequency:   37.3652106337
+  - # 5
+    frequency:   42.2909631941
+  - # 6
+    frequency:   48.4533119575
+
+- q-position: [    0.3733333,    0.2533333,    0.0000000 ]
+  distance:    0.3485630
+  band:
+  - # 1
+    frequency:   -3.2940267354
+  - # 2
+    frequency:   15.9641389506
+  - # 3
+    frequency:   26.2877709099
+  - # 4
+    frequency:   37.3394585742
+  - # 5
+    frequency:   42.2241497523
+  - # 6
+    frequency:   48.4663502443
+
+- q-position: [    0.3716667,    0.2566667,    0.0000000 ]
+  distance:    0.3499617
+  band:
+  - # 1
+    frequency:   -3.2965120722
+  - # 2
+    frequency:   15.9549671489
+  - # 3
+    frequency:   26.4131006724
+  - # 4
+    frequency:   37.3156307197
+  - # 5
+    frequency:   42.1580527317
+  - # 6
+    frequency:   48.4788684607
+
+- q-position: [    0.3700000,    0.2600000,    0.0000000 ]
+  distance:    0.3513604
+  band:
+  - # 1
+    frequency:   -3.2986299203
+  - # 2
+    frequency:   15.9459217308
+  - # 3
+    frequency:   26.5341535433
+  - # 4
+    frequency:   37.2937905375
+  - # 5
+    frequency:   42.0927696268
+  - # 6
+    frequency:   48.4908617820
+
+- q-position: [    0.3683333,    0.2633333,    0.0000000 ]
+  distance:    0.3527591
+  band:
+  - # 1
+    frequency:   -3.3003922022
+  - # 2
+    frequency:   15.9370220818
+  - # 3
+    frequency:   26.6507655601
+  - # 4
+    frequency:   37.2739920906
+  - # 5
+    frequency:   42.0284049254
+  - # 6
+    frequency:   48.5023258786
+
+- q-position: [    0.3666667,    0.2666667,    0.0000000 ]
+  distance:    0.3541578
+  band:
+  - # 1
+    frequency:   -3.3018123741
+  - # 2
+    frequency:   15.9282882425
+  - # 3
+    frequency:   26.7627771471
+  - # 4
+    frequency:   37.2562782678
+  - # 5
+    frequency:   41.9650707597
+  - # 6
+    frequency:   48.5132569197
+
+- q-position: [    0.3650000,    0.2700000,    0.0000000 ]
+  distance:    0.3555565
+  band:
+  - # 1
+    frequency:   -3.3029054555
+  - # 2
+    frequency:   15.9197409002
+  - # 3
+    frequency:   26.8700342155
+  - # 4
+    frequency:   37.2406788931
+  - # 5
+    frequency:   41.9028875973
+  - # 6
+    frequency:   48.5236515762
+
+- q-position: [    0.3633333,    0.2733333,    0.0000000 ]
+  distance:    0.3569552
+  band:
+  - # 1
+    frequency:   -3.3036880547
+  - # 2
+    frequency:   15.9114013794
+  - # 3
+    frequency:   26.9723893278
+  - # 4
+    frequency:   37.2272087356
+  - # 5
+    frequency:   41.8419849690
+  - # 6
+    frequency:   48.5335070234
+
+- q-position: [    0.3616667,    0.2766667,    0.0000000 ]
+  distance:    0.3583539
+  band:
+  - # 1
+    frequency:   -3.3041783914
+  - # 2
+    frequency:   15.9032916294
+  - # 3
+    frequency:   27.0697029074
+  - # 4
+    frequency:   37.2158654492
+  - # 5
+    frequency:   41.7825022217
+  - # 6
+    frequency:   48.5428209435
+
+- q-position: [    0.3600000,    0.2800000,    0.0000000 ]
+  distance:    0.3597526
+  band:
+  - # 1
+    frequency:   -3.3043963152
+  - # 2
+    frequency:   15.8954342105
+  - # 3
+    frequency:   27.1618444707
+  - # 4
+    frequency:   37.2066274774
+  - # 5
+    frequency:   41.7245892832
+  - # 6
+    frequency:   48.5515915273
+
+- q-position: [    0.3583333,    0.2833333,    0.0000000 ]
+  distance:    0.3611513
+  band:
+  - # 1
+    frequency:   -3.3043633187
+  - # 2
+    frequency:   15.8878522771
+  - # 3
+    frequency:   27.2486938558
+  - # 4
+    frequency:   37.1994519722
+  - # 5
+    frequency:   41.6684074186
+  - # 6
+    frequency:   48.5598174759
+
+- q-position: [    0.3566667,    0.2866667,    0.0000000 ]
+  distance:    0.3625500
+  band:
+  - # 1
+    frequency:   -3.3041025461
+  - # 2
+    frequency:   15.8805695593
+  - # 3
+    frequency:   27.3301424168
+  - # 4
+    frequency:   37.1942727834
+  - # 5
+    frequency:   41.6141299492
+  - # 6
+    frequency:   48.5674980024
+
+- q-position: [    0.3550000,    0.2900000,    0.0000000 ]
+  distance:    0.3639487
+  band:
+  - # 1
+    frequency:   -3.3036387949
+  - # 2
+    frequency:   15.8736103411
+  - # 3
+    frequency:   27.4060941541
+  - # 4
+    frequency:   37.1909985877
+  - # 5
+    frequency:   41.5619428994
+  - # 6
+    frequency:   48.5746328322
+
+- q-position: [    0.3533333,    0.2933333,    0.0000000 ]
+  distance:    0.3653474
+  band:
+  - # 1
+    frequency:   -3.3029985114
+  - # 2
+    frequency:   15.8669994371
+  - # 3
+    frequency:   27.4764667471
+  - # 4
+    frequency:   37.1895112360
+  - # 5
+    frequency:   41.5120455231
+  - # 6
+    frequency:   48.5812222045
+
+- q-position: [    0.3516667,    0.2966667,    0.0000000 ]
+  distance:    0.3667461
+  band:
+  - # 1
+    frequency:   -3.3022097779
+  - # 2
+    frequency:   15.8607621654
+  - # 3
+    frequency:   27.5411924570
+  - # 4
+    frequency:   37.1896644105
+  - # 5
+    frequency:   41.4646506513
+  - # 6
+    frequency:   48.5872668720
+
+- q-position: [    0.3500000,    0.3000000,    0.0000000 ]
+  distance:    0.3681448
+  band:
+  - # 1
+    frequency:   -3.3013022922
+  - # 2
+    frequency:   15.8549243191
+  - # 3
+    frequency:   27.6002188720
+  - # 4
+    frequency:   37.1912826929
+  - # 5
+    frequency:   41.4199847897
+  - # 6
+    frequency:   48.5927681014
+
+- q-position: [    0.3483333,    0.3033333,    0.0000000 ]
+  distance:    0.3695435
+  band:
+  - # 1
+    frequency:   -3.3003073377
+  - # 2
+    frequency:   15.8495121341
+  - # 3
+    frequency:   27.6535094667
+  - # 4
+    frequency:   37.1941611516
+  - # 5
+    frequency:   41.3782878841
+  - # 6
+    frequency:   48.5977276731
+
+- q-position: [    0.3466667,    0.3066667,    0.0000000 ]
+  distance:    0.3709422
+  band:
+  - # 1
+    frequency:   -3.2992577430
+  - # 2
+    frequency:   15.8445522544
+  - # 3
+    frequency:   27.7010439567
+  - # 4
+    frequency:   37.1980655645
+  - # 5
+    frequency:   41.3398126575
+  - # 6
+    frequency:   48.6021478808
+
+- q-position: [    0.3450000,    0.3100000,    0.0000000 ]
+  distance:    0.3723409
+  band:
+  - # 1
+    frequency:   -3.2981878319
+  - # 2
+    frequency:   15.8400716948
+  - # 3
+    frequency:   27.7428184336
+  - # 4
+    frequency:   37.2027333903
+  - # 5
+    frequency:   41.3048234220
+  - # 6
+    frequency:   48.6060315308
+
+- q-position: [    0.3433333,    0.3133333,    0.0000000 ]
+  distance:    0.3737396
+  band:
+  - # 1
+    frequency:   -3.2971333607
+  - # 2
+    frequency:   15.8360978001
+  - # 3
+    frequency:   27.7788452726
+  - # 4
+    frequency:   37.2078755982
+  - # 5
+    frequency:   41.2735942613
+  - # 6
+    frequency:   48.6093819408
+
+- q-position: [    0.3416667,    0.3166667,    0.0000000 ]
+  distance:    0.3751383
+  band:
+  - # 1
+    frequency:   -3.2961314441
+  - # 2
+    frequency:   15.8326582026
+  - # 3
+    frequency:   27.8091528149
+  - # 4
+    frequency:   37.2131794450
+  - # 5
+    frequency:   41.2464064951
+  - # 6
+    frequency:   48.6122029388
+
+- q-position: [    0.3400000,    0.3200000,    0.0000000 ]
+  distance:    0.3765370
+  band:
+  - # 1
+    frequency:   -3.2952204677
+  - # 2
+    frequency:   15.8297807754
+  - # 3
+    frequency:   27.8337848329
+  - # 4
+    frequency:   37.2183122599
+  - # 5
+    frequency:   41.2235453564
+  - # 6
+    frequency:   48.6144988616
+
+- q-position: [    0.3383333,    0.3233333,    0.0000000 ]
+  distance:    0.3779357
+  band:
+  - # 1
+    frequency:   -3.2944399876
+  - # 2
+    frequency:   15.8274935838
+  - # 3
+    frequency:   27.8527997930
+  - # 4
+    frequency:   37.2229262529
+  - # 5
+    frequency:   41.2052958504
+  - # 6
+    frequency:   48.6162745532
+
+- q-position: [    0.3366667,    0.3266667,    0.0000000 ]
+  distance:    0.3793344
+  band:
+  - # 1
+    frequency:   -3.2938306156
+  - # 2
+    frequency:   15.8258248336
+  - # 3
+    frequency:   27.8662699400
+  - # 4
+    frequency:   37.2266642985
+  - # 5
+    frequency:   41.1919378214
+  - # 6
+    frequency:   48.6175353622
+
+- q-position: [    0.3350000,    0.3300000,    0.0000000 ]
+  distance:    0.3807331
+  band:
+  - # 1
+    frequency:   -3.2934338903
+  - # 2
+    frequency:   15.8248028167
+  - # 3
+    frequency:   27.8742802288
+  - # 4
+    frequency:   37.2291665718
+  - # 5
+    frequency:   41.1837403238
+  - # 6
+    frequency:   48.6182871401
+
+- q-position: [    0.3333333,    0.3333333,    0.0000000 ]
+  distance:    0.3821318
+  band:
+  - # 1
+    frequency:   -3.2932921337
+  - # 2
+    frequency:   15.8244558539
+  - # 3
+    frequency:   27.8769271348
+  - # 4
+    frequency:   37.2300778279
+  - # 5
+    frequency:   41.1809554746
+  - # 6
+    frequency:   48.6185362383
+
+- q-position: [    0.3333333,    0.3333333,    0.0000000 ]
+  distance:    0.3821318
+  band:
+  - # 1
+    frequency:   -3.2932921337
+  - # 2
+    frequency:   15.8244558539
+  - # 3
+    frequency:   27.8769271348
+  - # 4
+    frequency:   37.2300778279
+  - # 5
+    frequency:   41.1809554746
+  - # 6
+    frequency:   48.6185362383
+
+- q-position: [    0.3300000,    0.3300000,    0.0000000 ]
+  distance:    0.3849292
+  band:
+  - # 1
+    frequency:   -3.2939457719
+  - # 2
+    frequency:   15.8259001598
+  - # 3
+    frequency:   27.8665665815
+  - # 4
+    frequency:   37.2257749569
+  - # 5
+    frequency:   41.1925091676
+  - # 6
+    frequency:   48.6175542849
+
+- q-position: [    0.3266667,    0.3266667,    0.0000000 ]
+  distance:    0.3877266
+  band:
+  - # 1
+    frequency:   -3.2961394273
+  - # 2
+    frequency:   15.8303825780
+  - # 3
+    frequency:   27.8361408085
+  - # 4
+    frequency:   37.2112913336
+  - # 5
+    frequency:   41.2280388919
+  - # 6
+    frequency:   48.6146502014
+
+- q-position: [    0.3233333,    0.3233333,    0.0000000 ]
+  distance:    0.3905240
+  band:
+  - # 1
+    frequency:   -3.3002219927
+  - # 2
+    frequency:   15.8381243563
+  - # 3
+    frequency:   27.7867018662
+  - # 4
+    frequency:   37.1846853752
+  - # 5
+    frequency:   41.2883460888
+  - # 6
+    frequency:   48.6098924798
+
+- q-position: [    0.3200000,    0.3200000,    0.0000000 ]
+  distance:    0.3933214
+  band:
+  - # 1
+    frequency:   -3.3065364282
+  - # 2
+    frequency:   15.8493409653
+  - # 3
+    frequency:   27.7193604379
+  - # 4
+    frequency:   37.1446715235
+  - # 5
+    frequency:   41.3735002998
+  - # 6
+    frequency:   48.6033572737
+
+- q-position: [    0.3166667,    0.3166667,    0.0000000 ]
+  distance:    0.3961188
+  band:
+  - # 1
+    frequency:   -3.3154122214
+  - # 2
+    frequency:   15.8642398168
+  - # 3
+    frequency:   27.6352495157
+  - # 4
+    frequency:   37.0906496151
+  - # 5
+    frequency:   41.4828454684
+  - # 6
+    frequency:   48.5951282504
+
+- q-position: [    0.3133333,    0.3133333,    0.0000000 ]
+  distance:    0.3989162
+  band:
+  - # 1
+    frequency:   -3.3271574737
+  - # 2
+    frequency:   15.8830179371
+  - # 3
+    frequency:   27.5354941832
+  - # 4
+    frequency:   37.0226345536
+  - # 5
+    frequency:   41.6151001704
+  - # 6
+    frequency:   48.5852964228
+
+- q-position: [    0.3100000,    0.3100000,    0.0000000 ]
+  distance:    0.4017136
+  band:
+  - # 1
+    frequency:   -3.3420509096
+  - # 2
+    frequency:   15.9058596374
+  - # 3
+    frequency:   27.4211880729
+  - # 4
+    frequency:   36.9411182821
+  - # 5
+    frequency:   41.7685192045
+  - # 6
+    frequency:   48.5739599627
+
+- q-position: [    0.3066667,    0.3066667,    0.0000000 ]
+  distance:    0.4045110
+  band:
+  - # 1
+    frequency:   -3.3603341548
+  - # 2
+    frequency:   15.9329342302
+  - # 3
+    frequency:   27.2933763052
+  - # 4
+    frequency:   36.8469068506
+  - # 5
+    frequency:   41.9410739346
+  - # 6
+    frequency:   48.5612239943
+
+- q-position: [    0.3033333,    0.3033333,    0.0000000 ]
+  distance:    0.4073083
+  band:
+  - # 1
+    frequency:   -3.3822046509
+  - # 2
+    frequency:   15.9643938419
+  - # 3
+    frequency:   27.1530442236
+  - # 4
+    frequency:   36.7409686437
+  - # 5
+    frequency:   42.1306159919
+  - # 6
+    frequency:   48.5472003707
+
+- q-position: [    0.3000000,    0.3000000,    0.0000000 ]
+  distance:    0.4101057
+  band:
+  - # 1
+    frequency:   -3.4078095723
+  - # 2
+    frequency:   16.0003713718
+  - # 3
+    frequency:   27.0011109849
+  - # 4
+    frequency:   36.6243142968
+  - # 5
+    frequency:   42.3350047278
+  - # 6
+    frequency:   48.5320074349
+
+- q-position: [    0.2966667,    0.2966667,    0.0000000 ]
+  distance:    0.4129031
+  band:
+  - # 1
+    frequency:   -3.4372410676
+  - # 2
+    frequency:   16.0409786491
+  - # 3
+    frequency:   26.8384269910
+  - # 4
+    frequency:   36.4979138923
+  - # 5
+    frequency:   42.5521938120
+  - # 6
+    frequency:   48.5157697685
+
+- q-position: [    0.2933333,    0.2933333,    0.0000000 ]
+  distance:    0.4157005
+  band:
+  - # 1
+    frequency:   -3.4705330827
+  - # 2
+    frequency:   16.0863048327
+  - # 3
+    frequency:   26.6657742039
+  - # 4
+    frequency:   36.3626474572
+  - # 5
+    frequency:   42.7802818768
+  - # 6
+    frequency:   48.4986179378
+
+- q-position: [    0.2900000,    0.2900000,    0.0000000 ]
+  distance:    0.4184979
+  band:
+  - # 1
+    frequency:   -3.5076599245
+  - # 2
+    frequency:   16.1364150954
+  - # 3
+    frequency:   26.4838685049
+  - # 4
+    frequency:   36.2192808219
+  - # 5
+    frequency:   43.0175359419
+  - # 6
+    frequency:   48.4806882447
+
+- q-position: [    0.2866667,    0.2866667,    0.0000000 ]
+  distance:    0.4212953
+  band:
+  - # 1
+    frequency:   -3.5485366158
+  - # 2
+    frequency:   16.1913496246
+  - # 3
+    frequency:   26.2933634056
+  - # 4
+    frequency:   36.0684586613
+  - # 5
+    frequency:   43.2623964385
+  - # 6
+    frequency:   48.4621225017
+
+- q-position: [    0.2833333,    0.2833333,    0.0000000 ]
+  distance:    0.4240927
+  band:
+  - # 1
+    frequency:   -3.5930209785
+  - # 2
+    frequency:   16.2511229647
+  - # 3
+    frequency:   26.0948545691
+  - # 4
+    frequency:   35.9107080192
+  - # 5
+    frequency:   43.5134710061
+  - # 6
+    frequency:   48.4430678542
+
+- q-position: [    0.2800000,    0.2800000,    0.0000000 ]
+  distance:    0.4268901
+  band:
+  - # 1
+    frequency:   -3.6409172792
+  - # 2
+    frequency:   16.3157237120
+  - # 3
+    frequency:   25.8888847287
+  - # 4
+    frequency:   35.7464475138
+  - # 5
+    frequency:   43.7695221951
+  - # 6
+    frequency:   48.4236766862
+
+- q-position: [    0.2766667,    0.2766667,    0.0000000 ]
+  distance:    0.4296875
+  band:
+  - # 1
+    frequency:   -3.6919811876
+  - # 2
+    frequency:   16.3851145672
+  - # 3
+    frequency:   25.6759487108
+  - # 4
+    frequency:   35.5759990831
+  - # 5
+    frequency:   44.0294524119
+  - # 6
+    frequency:   48.4041066679
+
+- q-position: [    0.2733333,    0.2733333,    0.0000000 ]
+  distance:    0.4324849
+  band:
+  - # 1
+    frequency:   -3.7459257459
+  - # 2
+    frequency:   16.4592327341
+  - # 3
+    frequency:   25.4564983508
+  - # 4
+    frequency:   35.3996003754
+  - # 5
+    frequency:   44.2922880739
+  - # 6
+    frequency:   48.3845210275
+
+- q-position: [    0.2700000,    0.2700000,    0.0000000 ]
+  distance:    0.4352823
+  band:
+  - # 1
+    frequency:   -3.8024280163
+  - # 2
+    frequency:   16.5379906479
+  - # 3
+    frequency:   25.2309471700
+  - # 4
+    frequency:   35.2174167375
+  - # 5
+    frequency:   44.5571639793
+  - # 6
+    frequency:   48.3650891831
+
+- q-position: [    0.2666667,    0.2666667,    0.0000000 ]
+  distance:    0.4380797
+  band:
+  - # 1
+    frequency:   -3.8611360815
+  - # 2
+    frequency:   16.6212770047
+  - # 3
+    frequency:   24.9996747241
+  - # 4
+    frequency:   35.0295522822
+  - # 5
+    frequency:   44.8233082345
+  - # 6
+    frequency:   48.3459879475
+
+- q-position: [    0.2633333,    0.2633333,    0.0000000 ]
+  distance:    0.4408771
+  band:
+  - # 1
+    frequency:   -3.9216760957
+  - # 2
+    frequency:   16.7089580561
+  - # 3
+    frequency:   24.7630305798
+  - # 4
+    frequency:   34.8360598372
+  - # 5
+    frequency:   45.0900275860
+  - # 6
+    frequency:   48.3274036589
+
+- q-position: [    0.2600000,    0.2600000,    0.0000000 ]
+  distance:    0.4436745
+  band:
+  - # 1
+    frequency:   -3.9836591274
+  - # 2
+    frequency:   16.8008791306
+  - # 3
+    frequency:   24.5213378979
+  - # 4
+    frequency:   34.6369497489
+  - # 5
+    frequency:   45.3566925580
+  - # 6
+    frequency:   48.3095358394
+
+- q-position: [    0.2566667,    0.2566667,    0.0000000 ]
+  distance:    0.4464719
+  band:
+  - # 1
+    frequency:   -4.0466875885
+  - # 2
+    frequency:   16.8968663365
+  - # 3
+    frequency:   24.2748966199
+  - # 4
+    frequency:   34.4321976077
+  - # 5
+    frequency:   45.6227212271
+  - # 6
+    frequency:   48.2926034509
+
+- q-position: [    0.2533333,    0.2533333,    0.0000000 ]
+  distance:    0.4492693
+  band:
+  - # 1
+    frequency:   -4.1103610976
+  - # 2
+    frequency:   16.9967284018
+  - # 3
+    frequency:   24.0239862708
+  - # 4
+    frequency:   34.2217509952
+  - # 5
+    frequency:   45.8875594997
+  - # 6
+    frequency:   48.2768557323
+
+- q-position: [    0.2500000,    0.2500000,    0.0000000 ]
+  distance:    0.4520667
+  band:
+  - # 1
+    frequency:   -4.1742816823
+  - # 2
+    frequency:   17.1002586071
+  - # 3
+    frequency:   23.7688683927
+  - # 4
+    frequency:   34.0055353673
+  - # 5
+    frequency:   46.1506538563
+  - # 6
+    frequency:   48.2625914979
+
+- q-position: [    0.2466667,    0.2466667,    0.0000000 ]
+  distance:    0.4548641
+  band:
+  - # 1
+    frequency:   -4.2380582692
+  - # 2
+    frequency:   17.2072367689
+  - # 3
+    frequency:   23.5097886334
+  - # 4
+    frequency:   33.7834591799
+  - # 5
+    frequency:   46.4114083611
+  - # 6
+    frequency:   48.2501949435
+
+- q-position: [    0.2433333,    0.2433333,    0.0000000 ]
+  distance:    0.4576615
+  band:
+  - # 1
+    frequency:   -4.3013104521
+  - # 2
+    frequency:   17.3174312350
+  - # 3
+    frequency:   23.2469785147
+  - # 4
+    frequency:   33.5554183556
+  - # 5
+    frequency:   46.6691079252
+  - # 6
+    frequency:   48.2402058342
+
+- q-position: [    0.2400000,    0.2400000,    0.0000000 ]
+  distance:    0.4604589
+  band:
+  - # 1
+    frequency:   -4.3636715602
+  - # 2
+    frequency:   17.4306008572
+  - # 3
+    frequency:   22.9806569045
+  - # 4
+    frequency:   33.3213001731
+  - # 5
+    frequency:   46.9227647174
+  - # 6
+    frequency:   48.2334670607
+
+- q-position: [    0.2366667,    0.2366667,    0.0000000 ]
+  distance:    0.4632563
+  band:
+  - # 1
+    frequency:   -4.4247910692
+  - # 2
+    frequency:   17.5464969136
+  - # 3
+    frequency:   22.7110312214
+  - # 4
+    frequency:   33.0809866524
+  - # 5
+    frequency:   47.1707747092
+  - # 6
+    frequency:   48.2314624798
+
+- q-position: [    0.2333333,    0.2333333,    0.0000000 ]
+  distance:    0.4660537
+  band:
+  - # 1
+    frequency:   -4.4843364132
+  - # 2
+    frequency:   17.6648649543
+  - # 3
+    frequency:   22.4382983954
+  - # 4
+    frequency:   32.8343574929
+  - # 5
+    frequency:   47.4100614923
+  - # 6
+    frequency:   48.2371678220
+
+- q-position: [    0.2300000,    0.2300000,    0.0000000 ]
+  distance:    0.4688511
+  band:
+  - # 1
+    frequency:   -4.5419942651
+  - # 2
+    frequency:   17.7854465542
+  - # 3
+    frequency:   22.1626456131
+  - # 4
+    frequency:   32.5812926146
+  - # 5
+    frequency:   47.6337695936
+  - # 6
+    frequency:   48.2573523787
+
+- q-position: [    0.2266667,    0.2266667,    0.0000000 ]
+  distance:    0.4716485
+  band:
+  - # 1
+    frequency:   -4.5974713548
+  - # 2
+    frequency:   17.9079809578
+  - # 3
+    frequency:   21.8842508696
+  - # 4
+    frequency:   32.3216743437
+  - # 5
+    frequency:   47.8257954616
+  - # 6
+    frequency:   48.3080432561
+
+- q-position: [    0.2233333,    0.2233333,    0.0000000 ]
+  distance:    0.4744459
+  band:
+  - # 1
+    frequency:   -4.6504948936
+  - # 2
+    frequency:   18.0322066071
+  - # 3
+    frequency:   21.6032833547
+  - # 4
+    frequency:   32.0553892767
+  - # 5
+    frequency:   47.9595936114
+  - # 6
+    frequency:   48.4157146759
+
+- q-position: [    0.2200000,    0.2200000,    0.0000000 ]
+  distance:    0.4772433
+  band:
+  - # 1
+    frequency:   -4.7008126719
+  - # 2
+    frequency:   18.1578625490
+  - # 3
+    frequency:   21.3199036961
+  - # 4
+    frequency:   31.7823298533
+  - # 5
+    frequency:   48.0303454932
+  - # 6
+    frequency:   48.5851147463
+
+- q-position: [    0.2166667,    0.2166667,    0.0000000 ]
+  distance:    0.4800407
+  band:
+  - # 1
+    frequency:   -4.7481928908
+  - # 2
+    frequency:   18.2846897180
+  - # 3
+    frequency:   21.0342640843
+  - # 4
+    frequency:   31.5023956639
+  - # 5
+    frequency:   48.0652050048
+  - # 6
+    frequency:   48.7890157763
+
+- q-position: [    0.2133333,    0.2133333,    0.0000000 ]
+  distance:    0.4828381
+  band:
+  - # 1
+    frequency:   -4.7924237806
+  - # 2
+    frequency:   18.4124320979
+  - # 3
+    frequency:   20.7465083022
+  - # 4
+    frequency:   31.2154945148
+  - # 5
+    frequency:   48.0852168434
+  - # 6
+    frequency:   49.0062919490
+
+- q-position: [    0.2100000,    0.2100000,    0.0000000 ]
+  distance:    0.4856355
+  band:
+  - # 1
+    frequency:   -4.8333130565
+  - # 2
+    frequency:   18.5408377650
+  - # 3
+    frequency:   20.4567716826
+  - # 4
+    frequency:   30.9215432724
+  - # 5
+    frequency:   48.0994930114
+  - # 6
+    frequency:   49.2277390495
+
+- q-position: [    0.2066667,    0.2066667,    0.0000000 ]
+  distance:    0.4884329
+  band:
+  - # 1
+    frequency:   -4.8706872505
+  - # 2
+    frequency:   18.6696598174
+  - # 3
+    frequency:   20.1651810156
+  - # 4
+    frequency:   30.6204685058
+  - # 5
+    frequency:   48.1118449801
+  - # 6
+    frequency:   49.4494387701
+
+- q-position: [    0.2033333,    0.2033333,    0.0000000 ]
+  distance:    0.4912303
+  band:
+  - # 1
+    frequency:   -4.9043909572
+  - # 2
+    frequency:   18.7986571978
+  - # 3
+    frequency:   19.8718544271
+  - # 4
+    frequency:   30.3122069461
+  - # 5
+    frequency:   48.1240356129
+  - # 6
+    frequency:   49.6695035167
+
+- q-position: [    0.2000000,    0.2000000,    0.0000000 ]
+  distance:    0.4940277
+  band:
+  - # 1
+    frequency:   -4.9342860204
+  - # 2
+    frequency:   18.9275954158
+  - # 3
+    frequency:   19.5769012494
+  - # 4
+    frequency:   29.9967057810
+  - # 5
+    frequency:   48.1369695650
+  - # 6
+    frequency:   49.8868830329
+
+- q-position: [    0.1966667,    0.1966667,    0.0000000 ]
+  distance:    0.4968251
+  band:
+  - # 1
+    frequency:   -4.9602506863
+  - # 2
+    frequency:   19.0562471783
+  - # 3
+    frequency:   19.2804219013
+  - # 4
+    frequency:   29.6739227996
+  - # 5
+    frequency:   48.1511504131
+  - # 6
+    frequency:   50.1009046233
+
+- q-position: [    0.1933333,    0.1933333,    0.0000000 ]
+  distance:    0.4996225
+  band:
+  - # 1
+    frequency:   -4.9821787416
+  - # 2
+    frequency:   18.9825077968
+  - # 3
+    frequency:   19.1843929342
+  - # 4
+    frequency:   29.3438264067
+  - # 5
+    frequency:   48.1668742832
+  - # 6
+    frequency:   50.3110772449
+
+- q-position: [    0.1900000,    0.1900000,    0.0000000 ]
+  distance:    0.5024199
+  band:
+  - # 1
+    frequency:   -4.9999786533
+  - # 2
+    frequency:   18.6832412955
+  - # 3
+    frequency:   19.3118213415
+  - # 4
+    frequency:   29.0063955192
+  - # 5
+    frequency:   48.1843199329
+  - # 6
+    frequency:   50.5169995471
+
+- q-position: [    0.1866667,    0.1866667,    0.0000000 ]
+  distance:    0.5052173
+  band:
+  - # 1
+    frequency:   -5.0135727200
+  - # 2
+    frequency:   18.3826957098
+  - # 3
+    frequency:   19.4383296646
+  - # 4
+    frequency:   28.6616193629
+  - # 5
+    frequency:   48.2035941987
+  - # 6
+    frequency:   50.7183129874
+
+- q-position: [    0.1833333,    0.1833333,    0.0000000 ]
+  distance:    0.5080147
+  band:
+  - # 1
+    frequency:   -5.0228962462
+  - # 2
+    frequency:   18.0809353784
+  - # 3
+    frequency:   19.5637241066
+  - # 4
+    frequency:   28.3094971822
+  - # 5
+    frequency:   48.2247565689
+  - # 6
+    frequency:   50.9146762948
+
+- q-position: [    0.1800000,    0.1800000,    0.0000000 ]
+  distance:    0.5108121
+  band:
+  - # 1
+    frequency:   -5.0278967442
+  - # 2
+    frequency:   17.7780158139
+  - # 3
+    frequency:   19.6878200845
+  - # 4
+    frequency:   27.9500378784
+  - # 5
+    frequency:   48.2478332986
+  - # 6
+    frequency:   51.1057508972
+
+- q-position: [    0.1766667,    0.1766667,    0.0000000 ]
+  distance:    0.5136095
+  band:
+  - # 1
+    frequency:   -5.0285331693
+  - # 2
+    frequency:   17.4739839312
+  - # 3
+    frequency:   19.8104424517
+  - # 4
+    frequency:   27.5832595886
+  - # 5
+    frequency:   48.2728259698
+  - # 6
+    frequency:   51.2911924347
+
+- q-position: [    0.1733333,    0.1733333,    0.0000000 ]
+  distance:    0.5164069
+  band:
+  - # 1
+    frequency:   -5.0247751912
+  - # 2
+    frequency:   17.1688783565
+  - # 3
+    frequency:   19.9314256734
+  - # 4
+    frequency:   27.2091892202
+  - # 5
+    frequency:   48.2997169539
+  - # 6
+    frequency:   51.4706459239
+
+- q-position: [    0.1700000,    0.1700000,    0.0000000 ]
+  distance:    0.5192043
+  band:
+  - # 1
+    frequency:   -5.0166025033
+  - # 2
+    frequency:   16.8627298197
+  - # 3
+    frequency:   20.0506139592
+  - # 4
+    frequency:   26.8278619510
+  - # 5
+    frequency:   48.3284730732
+  - # 6
+    frequency:   51.6437432918
+
+- q-position: [    0.1666667,    0.1666667,    0.0000000 ]
+  distance:    0.5220017
+  band:
+  - # 1
+    frequency:   -5.0040041697
+  - # 2
+    frequency:   16.5555616248
+  - # 3
+    frequency:   20.1678613565
+  - # 4
+    frequency:   26.4393207071
+  - # 5
+    frequency:   48.3590481770
+  - # 6
+    frequency:   51.8101025714
+
+- q-position: [    0.1633333,    0.1633333,    0.0000000 ]
+  distance:    0.5247991
+  band:
+  - # 1
+    frequency:   -4.9869780114
+  - # 2
+    frequency:   16.2473901931
+  - # 3
+    frequency:   20.2830318083
+  - # 4
+    frequency:   26.0436156298
+  - # 5
+    frequency:   48.3913850426
+  - # 6
+    frequency:   51.9693283496
+
+- q-position: [    0.1600000,    0.1600000,    0.0000000 ]
+  distance:    0.5275965
+  band:
+  - # 1
+    frequency:   -4.9655300305
+  - # 2
+    frequency:   15.9382256731
+  - # 3
+    frequency:   20.3959991783
+  - # 4
+    frequency:   25.6408035400
+  - # 5
+    frequency:   48.4254168458
+  - # 6
+    frequency:   52.1210132164
+
+- q-position: [    0.1566667,    0.1566667,    0.0000000 ]
+  distance:    0.5303939
+  band:
+  - # 1
+    frequency:   -4.9396738697
+  - # 2
+    frequency:   15.6280726054
+  - # 3
+    frequency:   20.5066472450
+  - # 4
+    frequency:   25.2309474094
+  - # 5
+    frequency:   48.4610683490
+  - # 6
+    frequency:   52.2647400523
+
+- q-position: [    0.1533333,    0.1533333,    0.0000000 ]
+  distance:    0.5331913
+  band:
+  - # 1
+    frequency:   -4.9094303088
+  - # 2
+    frequency:   15.3169306328
+  - # 3
+    frequency:   20.6148696681
+  - # 4
+    frequency:   24.8141158468
+  - # 5
+    frequency:   48.4982568991
+  - # 6
+    frequency:   52.4000850379
+
+- q-position: [    0.1500000,    0.1500000,    0.0000000 ]
+  distance:    0.5359887
+  band:
+  - # 1
+    frequency:   -4.8748267933
+  - # 2
+    frequency:   15.0047952436
+  - # 3
+    frequency:   20.7205699276
+  - # 4
+    frequency:   24.3903826058
+  - # 5
+    frequency:   48.5368932956
+  - # 6
+    frequency:   52.5266212958
+
+- q-position: [    0.1466667,    0.1466667,    0.0000000 ]
+  distance:    0.5387861
+  band:
+  - # 1
+    frequency:   -4.8358969955
+  - # 2
+    frequency:   14.6916585346
+  - # 3
+    frequency:   20.8236612374
+  - # 4
+    frequency:   23.9598261212
+  - # 5
+    frequency:   48.5768825656
+  - # 6
+    frequency:   52.6439230880
+
+- q-position: [    0.1433333,    0.1433333,    0.0000000 ]
+  distance:    0.5415835
+  band:
+  - # 1
+    frequency:   -4.7926804061
+  - # 2
+    frequency:   14.3775099809
+  - # 3
+    frequency:   20.9240664350
+  - # 4
+    frequency:   23.5225290772
+  - # 5
+    frequency:   48.6181246725
+  - # 6
+    frequency:   52.7515704983
+
+- q-position: [    0.1400000,    0.1400000,    0.0000000 ]
+  distance:    0.5443809
+  band:
+  - # 1
+    frequency:   -4.7452219524
+  - # 2
+    frequency:   14.0623372013
+  - # 3
+    frequency:   21.0217178473
+  - # 4
+    frequency:   23.0785780141
+  - # 5
+    frequency:   48.6605151730
+  - # 6
+    frequency:   52.8491545303
+
+- q-position: [    0.1366667,    0.1366667,    0.0000000 ]
+  distance:    0.5471783
+  band:
+  - # 1
+    frequency:   -4.6935716446
+  - # 2
+    frequency:   13.7461267047
+  - # 3
+    frequency:   21.1165571338
+  - # 4
+    frequency:   22.6280629754
+  - # 5
+    frequency:   48.7039458347
+  - # 6
+    frequency:   52.9362825520
+
+- q-position: [    0.1333333,    0.1333333,    0.0000000 ]
+  distance:    0.5499757
+  band:
+  - # 1
+    frequency:   -4.6377842458
+  - # 2
+    frequency:   13.4288646080
+  - # 3
+    frequency:   21.2085351074
+  - # 4
+    frequency:   22.1710771978
+  - # 5
+    frequency:   48.7483052218
+  - # 6
+    frequency:   53.0125840156
+
+- q-position: [    0.1300000,    0.1300000,    0.0000000 ]
+  distance:    0.5527731
+  band:
+  - # 1
+    frequency:   -4.5779189643
+  - # 2
+    frequency:   13.1105373151
+  - # 3
+    frequency:   21.2976115336
+  - # 4
+    frequency:   21.7077168468
+  - # 5
+    frequency:   48.7934792517
+  - # 6
+    frequency:   53.0777163798
+
+- q-position: [    0.1266667,    0.1266667,    0.0000000 ]
+  distance:    0.5555705
+  band:
+  - # 1
+    frequency:   -4.5140391682
+  - # 2
+    frequency:   12.7911321470
+  - # 3
+    frequency:   21.2380807975
+  - # 4
+    frequency:   21.3837549079
+  - # 5
+    frequency:   48.8393517278
+  - # 6
+    frequency:   53.1313711573
+
+- q-position: [    0.1233333,    0.1233333,    0.0000000 ]
+  distance:    0.5583679
+  band:
+  - # 1
+    frequency:   -4.4462121189
+  - # 2
+    frequency:   12.4706379183
+  - # 3
+    frequency:   20.7622704614
+  - # 4
+    frequency:   21.4669422130
+  - # 5
+    frequency:   48.8858048495
+  - # 6
+    frequency:   53.1732800127
+
+- q-position: [    0.1200000,    0.1200000,    0.0000000 ]
+  distance:    0.5611653
+  band:
+  - # 1
+    frequency:   -4.3745087227
+  - # 2
+    frequency:   12.1490454505
+  - # 3
+    frequency:   20.2803896584
+  - # 4
+    frequency:   21.5471586539
+  - # 5
+    frequency:   48.9327196999
+  - # 6
+    frequency:   53.2032208287
+
+- q-position: [    0.1166667,    0.1166667,    0.0000000 ]
+  distance:    0.5639627
+  band:
+  - # 1
+    frequency:   -4.2990032999
+  - # 2
+    frequency:   11.8263480222
+  - # 3
+    frequency:   19.7925445325
+  - # 4
+    frequency:   21.6243973737
+  - # 5
+    frequency:   48.9799767129
+  - # 6
+    frequency:   53.2210236615
+
+- q-position: [    0.1133333,    0.1133333,    0.0000000 ]
+  distance:    0.5667601
+  band:
+  - # 1
+    frequency:   -4.2197733682
+  - # 2
+    frequency:   11.5025417498
+  - # 3
+    frequency:   19.2988435092
+  - # 4
+    frequency:   21.6986591490
+  - # 5
+    frequency:   49.0274561192
+  - # 6
+    frequency:   53.2265765036
+
+- q-position: [    0.1100000,    0.1100000,    0.0000000 ]
+  distance:    0.5695575
+  band:
+  - # 1
+    frequency:   -4.1368994417
+  - # 2
+    frequency:   11.1776258996
+  - # 3
+    frequency:   18.7993972916
+  - # 4
+    frequency:   21.7699520649
+  - # 5
+    frequency:   49.0750383717
+  - # 6
+    frequency:   53.2198307721
+
+- q-position: [    0.1066667,    0.1066667,    0.0000000 ]
+  distance:    0.5723549
+  band:
+  - # 1
+    frequency:   -4.0504648421
+  - # 2
+    frequency:   10.8516031310
+  - # 3
+    frequency:   18.2943188937
+  - # 4
+    frequency:   21.8382911721
+  - # 5
+    frequency:   49.1226045492
+  - # 6
+    frequency:   53.2008064406
+
+- q-position: [    0.1033333,    0.1033333,    0.0000000 ]
+  distance:    0.5751523
+  band:
+  - # 1
+    frequency:   -3.9605555228
+  - # 2
+    frequency:   10.5244796706
+  - # 3
+    frequency:   17.7837237051
+  - # 4
+    frequency:   21.9036981237
+  - # 5
+    frequency:   49.1700367398
+  - # 6
+    frequency:   53.1695967334
+
+- q-position: [    0.1000000,    0.1000000,    0.0000000 ]
+  distance:    0.5779497
+  band:
+  - # 1
+    frequency:   -3.8672599035
+  - # 2
+    frequency:   10.1962654214
+  - # 3
+    frequency:   17.2677295849
+  - # 4
+    frequency:   21.9662007957
+  - # 5
+    frequency:   49.2172184016
+  - # 6
+    frequency:   53.1263723021
+
+- q-position: [    0.0966667,    0.0966667,    0.0000000 ]
+  distance:    0.5807471
+  band:
+  - # 1
+    frequency:   -3.7706687161
+  - # 2
+    frequency:    9.8669740085
+  - # 3
+    frequency:   16.7464569801
+  - # 4
+    frequency:   22.0258328887
+  - # 5
+    frequency:   49.2640347024
+  - # 6
+    frequency:   53.0713848045
+
+- q-position: [    0.0933333,    0.0933333,    0.0000000 ]
+  distance:    0.5835445
+  band:
+  - # 1
+    frequency:   -3.6708748593
+  - # 2
+    frequency:    9.5366227650
+  - # 3
+    frequency:   16.2200290639
+  - # 4
+    frequency:   22.0826335139
+  - # 5
+    frequency:   49.3103728365
+  - # 6
+    frequency:   53.0049698102
+
+- q-position: [    0.0900000,    0.0900000,    0.0000000 ]
+  distance:    0.5863419
+  band:
+  - # 1
+    frequency:   -3.5679732624
+  - # 2
+    frequency:    9.2052326631
+  - # 3
+    frequency:   15.6885718900
+  - # 4
+    frequency:   22.1366467640
+  - # 5
+    frequency:   49.3561223195
+  - # 6
+    frequency:   52.9275489565
+
+- q-position: [    0.0866667,    0.0866667,    0.0000000 ]
+  distance:    0.5891393
+  band:
+  - # 1
+    frequency:   -3.4620607575
+  - # 2
+    frequency:    8.8728281938
+  - # 3
+    frequency:   15.1522145575
+  - # 4
+    frequency:   22.1879212692
+  - # 5
+    frequency:   49.4011752600
+  - # 6
+    frequency:   52.8396312839
+
+- q-position: [    0.0833333,    0.0833333,    0.0000000 ]
+  distance:    0.5919367
+  band:
+  - # 1
+    frequency:   -3.3532359587
+  - # 2
+    frequency:    8.5394372002
+  - # 3
+    frequency:   14.6110893823
+  - # 4
+    frequency:   22.2365097403
+  - # 5
+    frequency:   49.4454266095
+  - # 6
+    frequency:   52.7418136820
+
+- q-position: [    0.0800000,    0.0800000,    0.0000000 ]
+  distance:    0.5947341
+  band:
+  - # 1
+    frequency:   -3.2415991487
+  - # 2
+    frequency:    8.2050906690
+  - # 3
+    frequency:   14.0653320699
+  - # 4
+    frequency:   22.2824685009
+  - # 5
+    frequency:   49.4887743885
+  - # 6
+    frequency:   52.6347803838
+
+- q-position: [    0.0766667,    0.0766667,    0.0000000 ]
+  distance:    0.5975315
+  band:
+  - # 1
+    frequency:   -3.1272521716
+  - # 2
+    frequency:    7.8698224858
+  - # 3
+    frequency:   13.5150818862
+  - # 4
+    frequency:   22.3258570086
+  - # 5
+    frequency:   49.5311198911
+  - # 6
+    frequency:   52.5193014479
+
+- q-position: [    0.0733333,    0.0733333,    0.0000000 ]
+  distance:    0.6003289
+  band:
+  - # 1
+    frequency:   -3.0102983318
+  - # 2
+    frequency:    7.5336691575
+  - # 3
+    frequency:   12.9604818205
+  - # 4
+    frequency:   22.3667373686
+  - # 5
+    frequency:   49.5723678667
+  - # 6
+    frequency:   52.3962301804
+
+- q-position: [    0.0700000,    0.0700000,    0.0000000 ]
+  distance:    0.6031263
+  band:
+  - # 1
+    frequency:   -2.8908422983
+  - # 2
+    frequency:    7.1966695087
+  - # 3
+    frequency:   12.4016787374
+  - # 4
+    frequency:   22.4051738407
+  - # 5
+    frequency:   49.6124266804
+  - # 6
+    frequency:   52.2664994510
+
+- q-position: [    0.0666667,    0.0666667,    0.0000000 ]
+  distance:    0.6059237
+  band:
+  - # 1
+    frequency:   -2.7689900139
+  - # 2
+    frequency:    6.8588643553
+  - # 3
+    frequency:   11.8388235143
+  - # 4
+    frequency:   22.4412323418
+  - # 5
+    frequency:   49.6512084520
+  - # 6
+    frequency:   52.1311168730
+
+- q-position: [    0.0633333,    0.0633333,    0.0000000 ]
+  distance:    0.6087211
+  band:
+  - # 1
+    frequency:   -2.6448486098
+  - # 2
+    frequency:    6.5202961615
+  - # 3
+    frequency:   11.2720711594
+  - # 4
+    frequency:   22.4749799457
+  - # 5
+    frequency:   49.6886291741
+  - # 6
+    frequency:   51.9911588257
+
+- q-position: [    0.0600000,    0.0600000,    0.0000000 ]
+  distance:    0.6115185
+  band:
+  - # 1
+    frequency:   -2.5185263234
+  - # 2
+    frequency:    6.1810086855
+  - # 3
+    frequency:   10.7015809079
+  - # 4
+    frequency:   22.5064843832
+  - # 5
+    frequency:   49.7246088117
+  - # 6
+    frequency:   51.8477633126
+
+- q-position: [    0.0566667,    0.0566667,    0.0000000 ]
+  distance:    0.6143158
+  band:
+  - # 1
+    frequency:   -2.3901324214
+  - # 2
+    frequency:    5.8410466180
+  - # 3
+    frequency:   10.1275162937
+  - # 4
+    frequency:   22.5358135441
+  - # 5
+    frequency:   49.7590713823
+  - # 6
+    frequency:   51.7021216665
+
+- q-position: [    0.0533333,    0.0533333,    0.0000000 ]
+  distance:    0.6171132
+  band:
+  - # 1
+    frequency:   -2.2597771256
+  - # 2
+    frequency:    5.5004552214
+  - # 3
+    frequency:    9.5500451936
+  - # 4
+    frequency:   22.5630349838
+  - # 5
+    frequency:   49.7919450183
+  - # 6
+    frequency:   51.5554691315
+
+- q-position: [    0.0500000,    0.0500000,    0.0000000 ]
+  distance:    0.6199106
+  band:
+  - # 1
+    frequency:   -2.1275715427
+  - # 2
+    frequency:    5.1592799740
+  - # 3
+    frequency:    8.9693398412
+  - # 4
+    frequency:   22.5882154370
+  - # 5
+    frequency:   49.8231620147
+  - # 6
+    frequency:   51.4090743714
+
+- q-position: [    0.0466667,    0.0466667,    0.0000000 ]
+  distance:    0.6227080
+  band:
+  - # 1
+    frequency:   -1.9936275969
+  - # 2
+    frequency:    4.8175662257
+  - # 3
+    frequency:    8.3855768104
+  - # 4
+    frequency:   22.6114203409
+  - # 5
+    frequency:   49.8526588602
+  - # 6
+    frequency:   51.2642279800
+
+- q-position: [    0.0433333,    0.0433333,    0.0000000 ]
+  distance:    0.6255054
+  band:
+  - # 1
+    frequency:   -1.8580579660
+  - # 2
+    frequency:    4.4753588728
+  - # 3
+    frequency:    7.7989369651
+  - # 4
+    frequency:   22.6327133705
+  - # 5
+    frequency:   49.8803762567
+  - # 6
+    frequency:   51.1222300939
+
+- q-position: [    0.0400000,    0.0400000,    0.0000000 ]
+  distance:    0.6283028
+  band:
+  - # 1
+    frequency:   -1.7209760193
+  - # 2
+    frequency:    4.1327020582
+  - # 3
+    frequency:    7.2096053761
+  - # 4
+    frequency:   22.6521559889
+  - # 5
+    frequency:   49.9062591259
+  - # 6
+    frequency:   50.9843772332
+
+- q-position: [    0.0366667,    0.0366667,    0.0000000 ]
+  distance:    0.6311002
+  band:
+  - # 1
+    frequency:   -1.5824957588
+  - # 2
+    frequency:    3.7896389026
+  - # 3
+    frequency:    6.6177712034
+  - # 4
+    frequency:   22.6698070148
+  - # 5
+    frequency:   49.9302566064
+  - # 6
+    frequency:   50.8519485264
+
+- q-position: [    0.0333333,    0.0333333,    0.0000000 ]
+  distance:    0.6338976
+  band:
+  - # 1
+    frequency:   -1.4427317622
+  - # 2
+    frequency:    3.4462112762
+  - # 3
+    frequency:    6.0236275438
+  - # 4
+    frequency:   22.6857222096
+  - # 5
+    frequency:   49.9523220426
+  - # 6
+    frequency:   50.7261915002
+
+- q-position: [    0.0300000,    0.0300000,    0.0000000 ]
+  distance:    0.6366950
+  band:
+  - # 1
+    frequency:   -1.3017991277
+  - # 2
+    frequency:    3.1024596135
+  - # 3
+    frequency:    5.4273712460
+  - # 4
+    frequency:   22.6999538873
+  - # 5
+    frequency:   49.9724129662
+  - # 6
+    frequency:   50.6083076416
+
+- q-position: [    0.0266667,    0.0266667,    0.0000000 ]
+  distance:    0.6394924
+  band:
+  - # 1
+    frequency:   -1.1598134216
+  - # 2
+    frequency:    2.7584227806
+  - # 3
+    frequency:    4.8292026907
+  - # 4
+    frequency:   22.7125505490
+  - # 5
+    frequency:   49.9904910729
+  - # 6
+    frequency:   50.4994379637
+
+- q-position: [    0.0233333,    0.0233333,    0.0000000 ]
+  distance:    0.6422898
+  band:
+  - # 1
+    frequency:   -1.0168906262
+  - # 2
+    frequency:    2.4141379961
+  - # 3
+    frequency:    4.2293255409
+  - # 4
+    frequency:   22.7235565441
+  - # 5
+    frequency:   50.0065221964
+  - # 6
+    frequency:   50.4006488236
+
+- q-position: [    0.0200000,    0.0200000,    0.0000000 ]
+  distance:    0.6450872
+  band:
+  - # 1
+    frequency:   -0.8731470903
+  - # 2
+    frequency:    2.0696408115
+  - # 3
+    frequency:    3.6279464607
+  - # 4
+    frequency:   22.7330117618
+  - # 5
+    frequency:   50.0204762789
+  - # 6
+    frequency:   50.3129182551
+
+- q-position: [    0.0166667,    0.0166667,    0.0000000 ]
+  distance:    0.6478846
+  band:
+  - # 1
+    frequency:   -0.7286994807
+  - # 2
+    frequency:    1.7249651501
+  - # 3
+    frequency:    3.0252748066
+  - # 4
+    frequency:   22.7409513527
+  - # 5
+    frequency:   50.0323273429
+  - # 6
+    frequency:   50.2371230860
+
+- q-position: [    0.0133333,    0.0133333,    0.0000000 ]
+  distance:    0.6506820
+  band:
+  - # 1
+    frequency:   -0.5836647343
+  - # 2
+    frequency:    1.3801434057
+  - # 3
+    frequency:    2.4215222936
+  - # 4
+    frequency:   22.7474054840
+  - # 5
+    frequency:   50.0420534628
+  - # 6
+    frequency:   50.1740271076
+
+- q-position: [    0.0100000,    0.0100000,    0.0000000 ]
+  distance:    0.6534794
+  band:
+  - # 1
+    frequency:   -0.4381600121
+  - # 2
+    frequency:    1.0352065979
+  - # 3
+    frequency:    1.8169026383
+  - # 4
+    frequency:   22.7523991296
+  - # 5
+    frequency:   50.0496367385
+  - # 6
+    frequency:   50.1242705535
+
+- q-position: [    0.0066667,    0.0066667,    0.0000000 ]
+  distance:    0.6562768
+  band:
+  - # 1
+    frequency:   -0.2923026529
+  - # 2
+    frequency:    0.6901845776
+  - # 3
+    frequency:    1.2116311826
+  - # 4
+    frequency:   22.7559518965
+  - # 5
+    frequency:   50.0550632735
+  - # 6
+    frequency:   50.0883611259
+
+- q-position: [    0.0033333,    0.0033333,    0.0000000 ]
+  distance:    0.6590742
+  band:
+  - # 1
+    frequency:   -0.1462101287
+  - # 2
+    frequency:    0.3451062780
+  - # 3
+    frequency:    0.6059245017
+  - # 4
+    frequency:   22.7580778877
+  - # 5
+    frequency:   50.0583231554
+  - # 6
+    frequency:   50.0666667807
+
+- q-position: [    0.0000000,    0.0000000,    0.0000000 ]
+  distance:    0.6618716
+  band:
+  - # 1
+    frequency:   -0.0000004909
+  - # 2
+    frequency:    0.0000002416
+  - # 3
+    frequency:    0.0000006294
+  - # 4
+    frequency:   22.7587856046
+  - # 5
+    frequency:   50.0594104425
+  - # 6
+    frequency:   50.0594104425
+
