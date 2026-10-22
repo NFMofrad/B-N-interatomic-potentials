@@ -1,0 +1,7 @@
+potential /scratch/work/fakhran1/hBN/05_Validation/06_energy_vs_strain/01_Attempt1/nep_best.txt
+minimize fire 1e-05 100000
+velocity 1e-6
+ensemble nve
+time_step 1e-6
+dump_thermo 1
+run 1
