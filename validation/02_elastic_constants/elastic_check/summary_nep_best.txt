@@ -1,0 +1,49 @@
+Elastic constants: NEP (GPUMD, 0 K static, relaxed-ion) vs DFT and experiment
+bulk in GPa; monolayer as 2D values in N/m
+
+quantity                unit   nep_best.txt   DFT (yours)  DFT (lit.)          exp.   vs exp
+--------------------------------------------------------------------------------------------
+bulk      C11           GPa           865.7             -       881.8      811.0±12    +6.7%
+bulk      C12           GPa           197.2             -       195.6      169.0±24   +16.7%
+bulk      C13           GPa             5.9             -         0.0         0.0±3        -
+bulk      C33           GPa            47.0             -        28.9      27.0±0.5   +74.1%
+bulk      C44           GPa             9.5             -         3.3       7.7±0.5   +24.0%
+bulk      C66           GPa           333.2             -       343.1         321.0    +3.8%
+bulk      (C11-C12)/2   GPa           334.3             -           -             -        -
+bulk      B (Reuss)     GPa            44.0             -        27.4        25.6±8   +72.0%
+monolayer C11           N/m           287.7             -       293.2             -        -
+monolayer C12           N/m            63.6             -        66.1             -        -
+monolayer C66           N/m           112.1             -           -             -        -
+monolayer (C11-C12)/2   N/m           112.1             -           -             -        -
+monolayer Y (2D)        N/m           273.7             -       278.3      289.0±24    -5.3%
+monolayer Poisson nu    -            0.2210             -      0.2254             -        -
+
+C66_check = (C11 - C12)/2 must equal C66 for hexagonal symmetry (a consistency check).
+B (Reuss) = [(C11+C12) C33 - 2 C13^2] / (C11 + C12 + 2 C33 - 4 C13).
+Monolayer 2D values = 3D cell stress x cell height; Y = (C11^2 - C12^2)/C11, nu = C12/C11.
+C13 is ~0, so no percent deviation is given for it.
+Experiment is at room temperature; NEP and DFT are static 0 K values.
+
+Full stiffness matrices, nep_best.txt (Voigt order xx yy zz yz xz xy)
+  bulk (GPa):
+       865.97    197.21      5.91      0.00      0.00      0.00
+       197.21    865.51      5.93      0.00      0.00      0.00
+         5.91      5.93     47.00     -0.00     -0.00     -0.00
+         0.00      0.00     -0.00      9.67      0.00     -0.00
+         0.00      0.00     -0.00      0.00      9.42      0.00
+         0.00      0.00     -0.00     -0.00      0.00    333.20
+  monolayer (N/m):
+       287.78     63.58      0.00      0.00     -0.00      0.00
+        63.58    287.71      0.00      0.00      0.00      0.00
+         0.00      0.00         -         -         -      0.00
+         0.00      0.00         -         -         -     -0.00
+        -0.00      0.00         -         -         -      0.00
+         0.00      0.00      0.00     -0.00      0.00    112.08
+
+References
+  [exp] Bosak et al., Phys. Rev. B 73, 041402(R) (2006)
+  [exp] derived: (C11 - C12)/2 from the Bosak et al. values
+  [exp] Falin et al., Nat. Commun. 8, 15815 (2017)
+  [DFT] Thiemann et al., J. Phys. Chem. C 124, 22278 (2020)
+  [DFT] derived: (C11 - C12)/2 from the Thiemann et al. values
+  [DFT] Peng et al., Comp. Mat. Sci. 56 (2012)

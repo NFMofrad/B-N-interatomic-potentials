@@ -1,0 +1,13 @@
+=== nep_best ===   (12 GPUMD runs at a time on GPU(s) 0, 1, 2)
+36 strained runs (bulk 576 atoms, monolayer 96 atoms) ...
+bulk: residual stress of the reference (GPa): +0.000 +0.000 +0.000 -0.000 -0.000 +0.000
+  C11: from stress    865.97 GPa, from energy curvature    864.94 GPa
+  C22: from stress    865.51 GPa, from energy curvature    864.73 GPa
+  C33: from stress     47.00 GPa, from energy curvature     46.23 GPa
+  C44: from stress      9.67 GPa, from energy curvature      9.24 GPa
+  C55: from stress      9.42 GPa, from energy curvature      9.11 GPa
+  C66: from stress    333.20 GPa, from energy curvature    332.85 GPa
+monolayer: residual stress of the reference (GPa): +0.000 +0.000 -0.000 -0.000 +0.000 +0.000
+  C11: from stress     71.94 GPa, from energy curvature     71.92 GPa
+  C22: from stress     71.93 GPa, from energy curvature     71.91 GPa
+  C66: from stress     28.02 GPa, from energy curvature     28.01 GPa
