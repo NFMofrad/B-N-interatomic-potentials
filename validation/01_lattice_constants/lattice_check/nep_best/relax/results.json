@@ -1,0 +1,42 @@
+{
+ "key": {
+  "v": 4,
+  "method": "relax",
+  "sha": "735c2d7fffa12beb",
+  "config": {
+   "a0": 2.504,
+   "c0": 6.66,
+   "d0": 3.33,
+   "vacuum": 20.0,
+   "layers": [
+    2,
+    3,
+    4
+   ],
+   "nep_cutoff": 6.0,
+   "box_force_tol": 1e-05,
+   "box_max_steps": 100000
+  }
+ },
+ "potential": "nep_best.txt",
+ "method": "relax",
+ "values": {
+  "monolayer.a": 2.508596292452066,
+  "bilayer.a": 2.5086891169959835,
+  "bilayer.d": 3.4868071010416664,
+  "trilayer.a": 2.5075031099682557,
+  "trilayer.d": 3.3500258723958343,
+  "tetralayer.a": 2.5071627409603803,
+  "tetralayer.d": 3.3242289642361094,
+  "bulk.a": 2.506191214544308,
+  "bulk.c": 6.547206066666667,
+  "bulk.d": 3.2736030333333326
+ },
+ "energy_per_atom": {
+  "monolayer": -8.877955228125,
+  "bilayer": -8.899100701041666,
+  "trilayer": -8.910039078819445,
+  "tetralayer": -8.915977130208333,
+  "bulk": -8.933804787673612
+ }
+}

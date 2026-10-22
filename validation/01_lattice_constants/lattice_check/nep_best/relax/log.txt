@@ -1,0 +1,7 @@
+=== nep_best  (method: relax) ===
+relaxing 5 structures (atoms + box) ...
+monolayer      a = 2.5086 A
+bilayer        a = 2.5087 A, d = 3.4868 A
+trilayer       a = 2.5075 A, d = 3.3500 A
+tetralayer     a = 2.5072 A, d = 3.3242 A
+bulk (AA')     a = 2.5062 A, c = 6.5472 A, d = 3.2736 A

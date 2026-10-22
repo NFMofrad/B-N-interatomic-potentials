@@ -1,0 +1,11 @@
+quantity,unit,nep_best.txt,DFT (yours),DFT_literature,experiment,experiment_uncertainty
+monolayer.a,A,2.508596292452066,,2.51,,
+bilayer.a,A,2.5086891169959835,,2.51,,
+bilayer.d,A,3.4868071010416664,,3.36,3.25,0.1
+trilayer.a,A,2.5075031099682557,,,,
+trilayer.d,A,3.3500258723958343,,,,
+tetralayer.a,A,2.5071627409603803,,,,
+tetralayer.d,A,3.3242289642361094,,,,
+bulk.a,A,2.506191214544308,,2.51,2.504,
+bulk.c,A,6.547206066666667,,6.61,6.6612,
+bulk.d,A,3.2736030333333326,,3.305,3.3306,
