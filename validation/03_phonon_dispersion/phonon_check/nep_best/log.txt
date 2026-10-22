@@ -1,0 +1,15 @@
+=== nep_best ===   (4 GPUMD runs at a time on GPU(s) 0)
+bulk       relaxed: a = 2.5062 A, c = 6.5472 A   (supercell 7x7x2)
+monolayer  relaxed: a = 2.5086 A   (supercell 7x7x1)
+bulk       2 displacements; lowest frequency on the path -0.0 cm-1
+monolayer  2 displacements; lowest frequency on the path -0.1 cm-1
+bulk       biaxial strain -5.0 %: lowest frequency -147.4 cm-1
+monolayer  biaxial strain -5.0 %: lowest frequency -167.7 cm-1
+bulk       biaxial strain -1.0 %: lowest frequency -8.0 cm-1
+monolayer  biaxial strain -1.0 %: lowest frequency -28.9 cm-1
+bulk       biaxial strain +1.0 %: lowest frequency -0.0 cm-1
+monolayer  biaxial strain +1.0 %: lowest frequency -0.0 cm-1
+bulk       biaxial strain +5.0 %: lowest frequency -0.0 cm-1
+monolayer  biaxial strain +5.0 %: lowest frequency -0.0 cm-1
+bulk       biaxial strain +10.0 %: lowest frequency -0.0 cm-1
+monolayer  biaxial strain +10.0 %: lowest frequency -0.0 cm-1
