@@ -1,0 +1,25 @@
+Lattice parameters: NEP (GPUMD, 0 K static; atoms + box relaxed (minimize fire)) vs DFT and experiment
+
+quantity              unit   nep_best.txt   DFT (yours)  DFT (lit.)          exp.   vs exp
+------------------------------------------------------------------------------------------
+monolayer hBN  a      A            2.5086             -      2.5100             -        -
+bilayer hBN    a      A            2.5087             -      2.5100             -        -
+bilayer hBN    d      A            3.4868             -      3.3600     3.25±0.10   +7.29%
+trilayer hBN   a      A            2.5075             -           -             -        -
+trilayer hBN   d      A            3.3500             -           -             -        -
+tetralayer hBN a      A            2.5072             -           -             -        -
+tetralayer hBN d      A            3.3242             -           -             -        -
+bulk hBN       a      A            2.5062             -      2.5100        2.5040   +0.09%
+bulk hBN       c      A            6.5472             -      6.6100        6.6612   -1.71%
+bulk hBN       d      A            3.2736             -      3.3050        3.3306   -1.71%
+
+d = interlayer distance (AA' stacking).
+Experimental values are at room temperature; NEP and DFT are static 0 K values
+without zero-point motion, so slightly smaller a and c are expected (~0.1-0.5%).
+
+References
+  [exp] Lynch & Drickamer, J. Chem. Phys. 44, 181 (1966), 297 K
+  [exp] derived: c/2 from the experimental c above
+  [exp] Warner et al., ACS Nano 4, 1299 (2010) (TEM)
+  [DFT] Thiemann et al., J. Phys. Chem. C 124, 22278 (2020)
+  [DFT] derived: c/2 from the c above
