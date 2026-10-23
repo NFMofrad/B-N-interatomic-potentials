@@ -1,0 +1,19 @@
+=== nep_best ===   (GPU(s) 0, 1, 2; up to 4 GPUMD runs at a time per GPU)
+monolayer  -> GPU 0
+bilayer    -> GPU 1
+bulk       -> GPU 2
+monolayer  relaxed: a = 2.5086 A   (96 atoms, 6x4x1 rectangular cells)
+bilayer    relaxed: a = 2.5087 A, d = 3.4868 A   (192 atoms, 6x4x1 rectangular cells)
+bulk       relaxed: a = 2.5062 A, c = 6.5472 A   (384 atoms, 6x4x2 rectangular cells)
+monolayer  done (25 strained/unstrained cells)
+bilayer    done (25 strained/unstrained cells)
+bulk       done (25 strained/unstrained cells)
+monolayer  biaxial   -10.0%: 776.4  -7.5%: 412.0  -5.0%: 172.2  -2.5%: 40.0  +0.0%: 0.0  +2.5%: 35.1  +5.0%: 132.3  +7.5%: 280.8  +10.0%: 472.1  meV/atom
+monolayer  zigzag    -10.0%: 295.7  -7.5%: 158.6  -5.0%: 67.0  -2.5%: 16.0  +0.0%: 0.0  +2.5%: 14.6  +5.0%: 56.1  +7.5%: 121.1  +10.0%: 206.2  meV/atom
+monolayer  armchair  -10.0%: 288.8  -7.5%: 156.0  -5.0%: 66.3  -2.5%: 15.9  +0.0%: 0.0  +2.5%: 14.7  +5.0%: 56.7  +7.5%: 122.6  +10.0%: 208.8  meV/atom
+bilayer    biaxial   -10.0%: 169.6  -7.5%: 120.5  -5.0%: 71.1  -2.5%: 39.8  +0.0%: 0.0  +2.5%: 34.8  +5.0%: 130.7  +7.5%: 277.0  +10.0%: 464.6  meV/atom
+bilayer    zigzag    -10.0%: 48.7  -7.5%: 35.8  -5.0%: 22.7  -2.5%: 10.2  +0.0%: 0.0  +2.5%: 14.5  +5.0%: 55.5  +7.5%: 119.5  +10.0%: 203.1  meV/atom
+bilayer    armchair  -10.0%: 37.2  -7.5%: 28.1  -5.0%: 18.1  -2.5%: 7.8  +0.0%: 0.0  +2.5%: 14.6  +5.0%: 56.0  +7.5%: 120.9  +10.0%: 205.7  meV/atom
+bulk       biaxial   -10.0%: 795.7  -7.5%: 422.8  -5.0%: 174.6  -2.5%: 40.0  +0.0%: 0.0  +2.5%: 34.5  +5.0%: 129.4  +7.5%: 273.5  +10.0%: 457.6  meV/atom
+bulk       zigzag    -10.0%: 67.3  -7.5%: 49.4  -5.0%: 29.2  -2.5%: 15.7  +0.0%: 0.0  +2.5%: 14.4  +5.0%: 55.1  +7.5%: 118.2  +10.0%: 200.4  meV/atom
+bulk       armchair  -10.0%: 127.1  -7.5%: 41.2  -5.0%: 24.7  -2.5%: 15.7  +0.0%: 0.0  +2.5%: 14.5  +5.0%: 55.5  +7.5%: 119.5  +10.0%: 202.7  meV/atom
